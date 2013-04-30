@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ListReports</class>
+ <widget class="QMainWindow" name="ListReports">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>765</width>
+    <height>408</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Language</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QRadioButton" name="ruRadio">
+          <property name="text">
+           <string>Ru</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QRadioButton" name="engRadio">
+          <property name="text">
+           <string>Eng</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QCheckBox" name="frontBox">
+          <property name="text">
+           <string>Front Page</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QCheckBox" name="refereeBox">
+          <property name="text">
+           <string>Referee List</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QCheckBox" name="numEntrBox">
+          <property name="text">
+           <string>Number Entries</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="2">
+         <widget class="QCheckBox" name="listEntrBox">
+          <property name="text">
+           <string>List Entries</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>Team</string>
+          </property>
+          <widget class="QCheckBox" name="teamCountry">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>91</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Country List</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="teamScore">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>91</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Scoresheet</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="7" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>Personal</string>
+          </property>
+          <widget class="QCheckBox" name="personalCountry">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>91</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Country List</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="personalScore">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>91</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Scoresheet</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWebView" name="webView">
+       <property name="url">
+        <url>
+         <string>about:blank</string>
+        </url>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>765</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPdf"/>
+   <addaction name="actionPreview"/>
+   <addaction name="separator"/>
+   <addaction name="actionGenerate"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionPdf">
+   <property name="icon">
+    <iconset resource="../../../melampig.qrc">
+     <normaloff>:/icons/page_white_acrobat.png</normaloff>:/icons/page_white_acrobat.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pdf</string>
+   </property>
+   <property name="toolTip">
+    <string>Print to PDF file</string>
+   </property>
+  </action>
+  <action name="actionPreview">
+   <property name="icon">
+    <iconset resource="../../../melampig.qrc">
+     <normaloff>:/icons/page_white_magnify.png</normaloff>:/icons/page_white_magnify.png</iconset>
+   </property>
+   <property name="text">
+    <string>Preview</string>
+   </property>
+  </action>
+  <action name="actionGenerate">
+   <property name="icon">
+    <iconset resource="../../../melampig.qrc">
+     <normaloff>:/icons/accept.png</normaloff>:/icons/accept.png</iconset>
+   </property>
+   <property name="text">
+    <string>Generate</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../../melampig.qrc"/>
+  <include location="../../../melampig.qrc"/>
+  <include location="../../../melampig.qrc"/>
+  <include location="../../../melampig.qrc"/>
+  <include location="../../../melampig.qrc"/>
+  <include location="../../../melampig.qrc"/>
+  <include location="../../../melampig.qrc"/>
+  <include location="../../../melampig.qrc"/>
+ </resources>
+ <connections/>
+</ui>

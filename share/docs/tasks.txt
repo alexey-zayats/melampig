@@ -1,0 +1,80 @@
+
+1. документаци€: 70тр
+2. доработки командников: 30т.р.
+3. доработки личных: 10тр.
+4. доработка выгрузки статуса соревновани€ в xml на сайт: 30т.р.
+5. слить все соревновани€ в одну базу: 30 т.р.
+
+«ащита программы
+
+http://www.codeproject.com/Articles/16506/Product-Activation-Based-on-RSA-Signatures
+http://www.codeproject.com/Articles/16465/Product-Keys-Based-on-the-Advanced-Encryption-Stan
+
+ћожно продавать софт через softkey
+http://www.softkey.ru/help/author/regkey.php
+
+ѕростой алгоритм генератора ключа
+http://old.kv.by/index2010391104.htm
+
+http://www.z-oleg.com/secur/articles/progprotect.php
+http://citforum.ru/security/articles/analis/#28
+
+---
+Unless you want a short key for manual keyboard entry, many of the above answsers are overly complex. 
+There are far simpler methods which can only be cracked by patching the application.
+
+1. Create a standard X.509 (SSL) certificate and private key.
+2. Feel free to use descriptive tags for the contents of the key so that it can be easily parsed by your application. 
+   E.g.: Person's Name ....
+3. Encrypt the above text in its entirety with your private key and give it to the user. It would appear as a block of Base64 text. 
+  (Don't hash it and encrypt only the hash since that would make it vulnerable to collision attacks if legitimate keys are known.)
+4. The certificate is already embedded in the application so the application simply decrypts the text and attempts to parse it 
+   according to the above format. If the key is invalid or wasn't encrypted with the same certificate the decryption would output gibberish and the parsing would fail.
+
+The ONLY way to crack this is to patch the application and swap out the certificate with your own certificate, the private key of which is known. 
+Then you can generate your own keys which would be accepted by the patched executable.
+For online verification things are much simpler. Just generate a hash of a random number and give it to the user. 
+Store the random number on the server and associate it with the product. 
+There is no way whatsoever to crack this other than brute force or hacking the server.
+---
+
+This same question was asked on SO and the accepted answer is pretty good. The general gist is:
+
+Take the user's name
+Concatentate the users name and the secret key and hash with (for example) SHA1
+Unpack the SHA1 hash as an alphanumeric string. This is the individual user's "Product Key"
+Within the program, do the same hash, and compare with the product key. If equal, OK.
+
+---
+
+I use a system like this:
+
+Х create a string from windows licence key + trial period end date
+
+Х generate a hash (Sha/md5) from the string
+
+Х convert the trial end date to an int (e.g. Number of days)
+
+Х the key becomes trial end date + some part of the hash
+
+Х convert the key to only uppercase characters to make it easier to enter
+
+ABCD-DEFG-HIJK...
+
+the validation works like
+
+Х convert key to bytes again
+
+Х extract trial end date
+
+Х create string from windows licence key + trial end date
+
+Х hash
+
+Х compare hash with rest of key
+
+this makes it difficult enough for my audience.
+
+---
+
+Encrypte part of program code with hash based on public key|hash

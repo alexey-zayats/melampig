@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Liste des Engagés par pays / Entry-List By Country</title>
+<style>
+body { margin: 0; padding: 0px 60px; font-family: Helvetica; font-size: 13pt; }
+
+.top { text-align: center}
+
+.top-left { float: left; width: 130px; height: 100px; border: 2px solid black; padding: 0; text-align: center; margin: 0;}
+.top-right { float: right; width: 130px; height: 100px; border: 2px solid black; padding: auto 0; text-align: center; margin: 0;}
+.top-left img, .top-right img { margin: 15px; }
+			
+.top-center { margin: 0 150px 10px 150px; border: 2px solid black; text-align: center; font-weight: bold; padding: 5px; }
+.top-center div {overflow: hidden}
+
+.page {
+	border: 1px dotted green;
+	padding: 20px 0 0px;
+	maring: 0;
+	max-height: 1380px;
+	min-height: 1380px;
+	max-width: 830px;
+	min-width: 830px;
+	oveflow: hidden;
+	page-break-after: always;
+	page-break-before: always;
+}
+
+@media print { 
+	.page { border: none !important; } 
+}
+
+.content { padding: 0 20px; }
+
+.total { text-align: center; margin-top: 40px; }
+.total .box {border: 2px solid black; padding: 5px 10px; margin-left: 100px}
+
+.team { margin: 30px 100px; padding: 0; width: 600px; border: 0px solid blue; }
+.team .cnt { text-decoration: underline; font-weight: bold; padding: 0; 	}
+.team td { vertical-align: top; padding-left: 50px; margin: 5; white-space: nowrap; font-size: 10pt; font-weight: bold; }
+.team td + td { font-weight: normal; }
+.team .weight { padding-left: 100px; }
+
+</style>
+
+
+</head>
+<body>
+
+{pages}
+
+</body>
+</html>

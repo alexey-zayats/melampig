@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="600"
+   id="svg378"
+   sodipodi:docbase="C:\Documents and Settings\David Nelson\Archives\Svg"
+   sodipodi:docname="Flag_of_Lesotho.svg"
+   sodipodi:version="0.32"
+   version="1.0"
+   width="900"
+   x="0"
+   y="0"
+   inkscape:version="0.43">
+  <sodipodi:namedview
+     id="base"
+     inkscape:zoom="0.62166667"
+     inkscape:cx="450"
+     inkscape:cy="300"
+     inkscape:window-width="756"
+     inkscape:window-height="540"
+     inkscape:window-x="93"
+     inkscape:window-y="48"
+     inkscape:current-layer="svg378" />
+  <defs
+     id="defs380" />
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title> lesotho</dc:title>
+        <dc:description />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>flags</rdf:li>
+            <rdf:li>africa</rdf:li>
+            <rdf:li>sign</rdf:li>
+            <rdf:li>signs_and_symbols</rdf:li>
+            <rdf:li />
+            <rdf:li>united_nations_member</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://www.openclipart.org">
+            <dc:title> Cezary Biele</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:creator>
+          <cc:Agent
+             rdf:about="">
+            <dc:title> Cezary Biele</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent
+             rdf:about="">
+            <dc:title> Cezary Biele</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date />
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://web.resource.org/cc/PublicDomain">
+          <dc:date />
+        </cc:license>
+        <dc:language>en</dc:language>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://web.resource.org/cc/PublicDomain">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g2493">
+    <g
+       transform="matrix(1.049121,0,0,1,2.330141e-3,-144.0943)"
+       id="g2483">
+      <rect
+         height="599.66821"
+         id="rect628"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         width="856.11395"
+         x="-0.0022210414"
+         y="144.0945" />
+      <path
+         d="M 857.13675,742.7483 L 857.85879,144.0943 L -0.0022210412,744.0943 L 857.13675,742.7483 z "
+         id="path624"
+         sodipodi:nodetypes="cccc"
+         style="font-size:12px;fill:#087bce;fill-opacity:1;fill-rule:evenodd;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         d="M 857.85879,743.79995 L 857.43886,344.0943 L 285.95145,744.0943 L 857.85879,743.79995 z "
+         id="path575"
+         sodipodi:nodetypes="cccc"
+         style="font-size:12px;fill:#38a100;fill-rule:evenodd;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
+    <path
+       style="fill:#9c4a08;fill-opacity:1;stroke:none"
+       d="M 232.14828,329.94681 C 242.13852,335.42253 251.30494,338.56328 258.13338,333.63191 C 268.11762,326.42053 254.25036,300.34999 242.04708,282.59971 C 229.8438,264.84943 213.75748,225.46587 229.28914,214.37189 C 244.82079,203.27791 266.10163,220.92172 272.5553,249.31779 C 275.329,261.52107 282.53996,277.60737 296.96188,274.27901 C 311.38421,270.95107 310.37665,249.13104 302.50929,226.02052 C 295.91525,206.65221 272.51752,164.35841 227.69858,143.87392 L 239.69795,121.37388 C 252.3095,124.7838 266.02478,119.18703 272.41106,107.16018 C 279.82722,93.19375 274.5172,75.85904 260.55078,68.44288 C 246.58435,61.02672 229.24964,66.33673 221.83348,80.30316 C 215.44721,92.32958 218.63132,106.88758 228.52026,115.42593 L 215.89754,139.13488 C 209.15452,136.84199 201.94658,135.08873 194.3484,133.90858 C 194.5682,129.97834 194.62658,126.45249 193.19916,126.45249 C 190.00946,126.45249 193.19916,111.4755 190.80667,111.4755 C 188.4146,111.4755 191.58541,96.22161 188.57345,96.22161 C 185.56233,96.22161 190.00946,81.24462 187.0855,81.24462 C 184.16196,81.24462 186.82018,65.15874 184.42769,65.15874 C 182.03563,65.15874 183.63048,50.7364 180.70652,50.7364 C 177.78299,50.7364 180.44121,39.64242 173.26502,39.64242 C 166.08842,39.64242 168.74622,50.7364 165.82268,50.7364 C 162.89872,50.7364 164.49358,65.15874 162.10151,65.15874 C 159.70945,65.15874 162.36724,81.24462 159.44371,81.24462 C 156.51974,81.24462 160.9673,96.22161 157.95575,96.22161 C 154.94379,96.22161 158.1146,111.4755 155.72253,111.4755 C 153.33047,111.4755 156.51974,126.45249 153.33047,126.45249 C 151.96959,126.45249 151.97474,129.64735 152.16707,133.35307 C 144.1413,134.18719 136.72558,135.48282 129.85419,137.27 L 110.69925,101.21008 L 142.94012,103.77301 L 76.747186,50.7364 L 83.609974,135.27805 L 99.545172,107.13313 L 117.63975,141.21484 C 77.734996,156.32577 59.229165,189.53559 48.180692,232.12217 C 45.144683,243.8236 44.052967,262.05125 56.012413,265.23881 C 67.040284,268.17737 75.08322,258.47047 80.075545,245.98941 C 92.061608,216.02512 109.75178,200.78195 124.45144,209.37955 C 139.75085,218.32832 133.37016,251.10153 115.02144,273.1697 C 94.772215,297.52391 72.911811,343.15894 118.1446,323.32656 L 82.183841,391.00531 C 78.158716,398.5859 89.487952,404.28786 93.382988,396.95198 L 137.20424,314.44477 C 146.00361,310.64547 156.19992,307.27202 167.89105,306.72037 L 167.91424,394.09369 C 167.91424,402.39937 178.47416,402.6767 178.47416,394.09369 L 178.43552,306.99941 C 188.35021,307.99368 199.24027,311.11469 211.25895,317.55763 L 253.5841,397.219 C 257.47956,404.55445 268.76329,398.87654 264.73817,391.29595 L 232.14828,329.94681 z "
+       id="path20" />
+  </g>
+</svg>

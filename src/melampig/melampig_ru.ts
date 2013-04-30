@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="ru_RU">
+<defaultcodec>UTF-8</defaultcodec>
+<context>
+    <name>MainWindow</name>
+    <message>
+        <source>MainWindow</source>
+        <translation>Мелампиг</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Помощь</translation>
+    </message>
+    <message>
+        <source>Window</source>
+        <translation>Окно</translation>
+    </message>
+    <message>
+        <source>File</source>
+        <translation>Файл</translation>
+    </message>
+    <message>
+        <source>Quit</source>
+        <translation>Выход</translation>
+    </message>
+    <message>
+        <source>Cl&amp;ose</source>
+        <translation>За&amp;рыть</translation>
+    </message>
+    <message>
+        <source>Close &amp;All</source>
+        <translation>Закрыть &amp;все</translation>
+    </message>
+    <message>
+        <source>&amp;Cascade</source>
+        <translation>&amp;Каскадом</translation>
+    </message>
+    <message>
+        <source>&amp;Next</source>
+        <translation>&amp;Следующее</translation>
+    </message>
+    <message>
+        <source>&amp;Previos</source>
+        <translation>&amp;Предыдущее</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>О программе</translation>
+    </message>
+    <message>
+        <source>About Qt</source>
+        <translation>О библиотеке Qt</translation>
+    </message>
+    <message>
+        <source>Ctrl+Q</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Alt+W</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>&amp;Tile</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Arrange &amp;icons</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Alt+Right</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Alt+Left</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>Melampig::MainWindow</name>
+    <message>
+        <source>Minimize</source>
+        <translation>Свернуть</translation>
+    </message>
+    <message>
+        <source>Maximize</source>
+        <translation>Развернуть</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Закрыть</translation>
+    </message>
+    <message>
+        <source>Melampig</source>
+        <translation>Мелампиг</translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <source>Error</source>
+        <translation>Ошибка</translation>
+    </message>
+</context>
+</TS>

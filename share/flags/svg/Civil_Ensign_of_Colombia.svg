@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="200"
+   id="svg378"
+   sodipodi:docbase="F:\Mis Documentos - Miaj Dokumentoj\Mis imágenes\++Wiki\Sullpukuna\SVG"
+   sodipodi:docname="Flag of Colombia.svg"
+   sodipodi:version="0.32"
+   version="1.0"
+   width="300"
+   x="0"
+   y="0"
+   inkscape:version="0.43">
+  <metadata
+     id="metadata1712">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Ecuador</dc:title>
+        <dc:description />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li />
+            <rdf:li>united_nations_member</rdf:li>
+            <rdf:li>latin_america</rdf:li>
+            <rdf:li>america</rdf:li>
+            <rdf:li>south_america</rdf:li>
+            <rdf:li>flag</rdf:li>
+            <rdf:li>sign</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://www.openclipart.org">
+            <dc:title>Caleb Moore</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Caleb Moore</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Caleb Moore</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date />
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://web.resource.org/cc/PublicDomain" />
+        <dc:language>en</dc:language>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://web.resource.org/cc/PublicDomain">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     id="base"
+     inkscape:zoom="1"
+     inkscape:cx="300"
+     inkscape:cy="5.6843419e-014"
+     inkscape:window-width="1024"
+     inkscape:window-height="708"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:current-layer="svg378" />
+  <defs
+     id="defs380" />
+  <g
+     id="g1845">
+    <g
+       id="g1840">
+      <rect
+         height="200"
+         id="rect1824"
+         style="font-size:12px;fill:#fcd116;fill-opacity:1;fill-rule:evenodd;stroke-width:1pt"
+         width="300"
+         x="0"
+         y="0" />
+      <rect
+         height="100"
+         id="rect1820"
+         style="font-size:12px;fill:#003893;fill-opacity:1;fill-rule:evenodd;stroke-width:1pt"
+         width="300"
+         x="0"
+         y="100" />
+      <rect
+         height="50"
+         id="rect1822"
+         style="font-size:12px;fill:#ce1126;fill-opacity:1;fill-rule:evenodd;stroke-width:1pt"
+         width="300"
+         x="0"
+         y="150" />
+    </g>
+    <g
+       id="g1835">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ce1126;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path1306"
+         sodipodi:cx="30"
+         sodipodi:cy="20"
+         sodipodi:rx="4"
+         sodipodi:ry="5"
+         d="M 34 20 A 4 5 0 1 1  26,20 A 4 5 0 1 1  34 20 z"
+         transform="matrix(5,0,0,5,2,1.999714)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#003893;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path1308"
+         sodipodi:cx="30"
+         sodipodi:cy="20"
+         sodipodi:rx="3"
+         sodipodi:ry="4"
+         d="M 33 20 A 3 4 0 1 1  27,20 A 3 4 0 1 1  33 20 z"
+         transform="matrix(5,0,0,5,2,1.999714)" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path1310"
+         sodipodi:sides="8"
+         sodipodi:cx="30"
+         sodipodi:cy="20"
+         sodipodi:r1="4.5361419"
+         sodipodi:r2="2.2680709"
+         sodipodi:arg1="0.80357798"
+         sodipodi:arg2="1.1962771"
+         inkscape:flatsided="false"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 33.148697,23.265316 L 30.829717,22.110856 L 29.917538,24.535392 L 29.094098,22.0793 L 26.734684,23.148697 L 27.889144,20.829717 L 25.464608,19.917538 L 27.9207,19.094098 L 26.851303,16.734684 L 29.170283,17.889144 L 30.082462,15.464608 L 30.905902,17.9207 L 33.265316,16.851303 L 32.110856,19.170283 L 34.535392,20.082462 L 32.0793,20.905902 L 33.148697,23.265316 z "
+         transform="matrix(1.575331,-2.359548e-4,2.359548e-4,1.575331,104.7353,70.50015)" />
+    </g>
+  </g>
+</svg>

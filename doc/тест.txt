@@ -1,0 +1,99 @@
+флаги Векипедия: http://en.wikipedia.org/wiki/Country_codes:_J%E2%80%93K
+
+
+
+
+Функция генерация тестового соревнования.
+
+X:\Melampig\workspace\melampig\share\db\sql\test\competition.sql        
+выбрать нужный запрос из файла
+
+
+
+
+				
+
+быстрая регенерация результатов тестового соревнования:
+
+
+UPDATE 
+    fight
+SET 
+    red_score[1] = cast(random()*10 as int),
+    red_score[2] = cast(random()*10 as int),
+    red_score[3] = cast(random()*10 as int),
+    blue_score[1] = cast(random()*10 as int), 
+    blue_score[2] = cast(random()*10 as int), 
+    blue_score[3] = cast(random()*10 as int),
+    winner = case cast(random()*10 as int)%2 when 1 then blue else red end,
+    classify = (select id from classify order by random() limit 1)
+WHERE
+    id in (
+	select id 
+	from fight 
+	where competition = 1308 
+		AND (winner IS NULL AND classify IS NULL) 
+		AND (red IS NOT NULL AND blue IS NOT NULL) 
+	limit 5
+)
+    and circle not in ( select id from circle where title  ilike 'final%' )
+;
+
+
+
+
+
+пока не будет Запрос успешно завершён: 0 строк изменено, ***
+
+
+X:\Melampig\database\pg_hba.conf
+добавить строку:
+host 	all 		all 		192.168.0.1/24 		md5
+
+192.168.1.1 - 192.168.1.255 	class C -> 24
+192.168.0.1 - 192.168.255.255	class B -> 16
+192.0.0.1   - 192.255.255.255 	CLASS A -> 8
+
+
+
+ранджирование команд в группах , перед посторением финальных схваток
+
+select 
+	ct.sorder as "жеребьевка", 
+	t.title as "команда", 
+	ct.classify_points as "классификационные очки", 
+	ct.fight_win as "кол-во выигранных схваток", 
+	ct.fight_loose as "кол-во проигранных схваток", 
+	ct.tech_points_win as "сумма выигранных технических очков", 
+	ct.tech_points_loose  as "сумма проигранных технических очков",
+	g.title as "Группа"
+from 
+	competition_team as ct, 
+	team as t ,
+	cgroup as g
+where 
+	ct.competition = 1308 
+	and t.id = ct.team 
+	and g.id = ct.cgroup
+order by 
+	3 desc,
+	4 desc,
+	5,
+	6 desc,
+	7
+;
+
+
+
+Соревнование
+	Стиль
+		Групповой этап
+			Группа
+				Круг
+		Ранжирование в группе
+		Финальные матчи
+			Снизу-вверх
+
+значки в отчетах должны меняться, филовский остается как есть, а справа доолжен изменятся на эмблему соревнований
+
+wmid: 106325025582

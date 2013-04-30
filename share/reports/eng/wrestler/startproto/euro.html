@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Start protocol</title>
+
+<style>
+body { margin: 0; padding: 0px 60px; font-family: Helvetica; font-size: 13pt; }
+
+.top { text-align: center}
+
+.top-left { float: left; width: 130px; height: 100px; border: 2px solid black; padding: 0; text-align: center; margin: 0;}
+.top-right { float: right; width: 130px; height: 100px; border: 2px solid black; padding: auto 0; text-align: center; margin: 0;}
+.top-left img, .top-right img { margin: 15px; }
+			
+.top-center { margin: 0 150px 10px 150px; border: 2px solid black; text-align: center; font-weight: bold; padding: 5px; }
+.top-center div {overflow: hidden}
+
+.page {
+	border: 1px dotted green;
+	padding: 20px 0 0px;
+	maring: 0;
+	max-height: 1340px;
+	min-height: 1340px;
+	max-width: 830px;
+	min-width: 830px;
+	oveflow: hidden;
+	page-break-after: always;
+	page-break-before: always;
+}
+
+@media print { 
+	.page { border: none !important; } 
+}
+
+
+.content { padding: 0; }
+
+.total { text-align: center; margin-top: 40px; }
+.total .box {border: 2px solid black; padding: 5px 10px; margin-left: 100px}
+
+.ctable { margin: 50px 0;  border: 1px solid blue; font-size: 10pt; }
+.ctable .head { background-color: blue; color: white; text-align: center; font-style: italic; font-weight: bold  }
+.ctable .head  td { padding: 5px;  border: 1px solid white; }
+.ctable td { padding: 2px; margin: 0; border: 1px solid blue; text-align: center;}
+.ctable td + td { text-align: left; padding-left: 10px; }
+
+</style>
+
+</head>
+<body>
+
+{pages}
+
+</body>
+</html>

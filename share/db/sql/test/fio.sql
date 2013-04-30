@@ -1,0 +1,1 @@
+insert into test.fio (lastname, firstname) select l.title, f.title from test.lastname as l, test.firstname as f;

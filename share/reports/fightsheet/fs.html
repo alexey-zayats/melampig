@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>FS: ScoreSheet</title>
+
+<style>
+body {
+	margin: 5px;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+	color: #000;
+	}
+
+table td { padding: 2px; font-size: 10px; }
+table td.h1 { font-weight: bold; font-size: 12px;}
+table td.bold { font-weight: bold; font-size: 12px;}
+
+.blueborder { border: 1px solid blue; }
+.redborder { border: 1px solid red; }
+.blackborder { border: 1px solid black; }
+</style>
+
+</head>
+<body>
+
+<table width="100%">
+<tr>
+<td width="30%" class="h1">BULLETIN DE POINTAGE</td>
+<td width="30%" align="center" class="h1">FREE STYLE</td>
+<td width="30%" align="right" class="size1">SCORE SHEET</td>
+</tr>
+</table>
+<br/>
+
+<!--
+<div style="width: 100%" align="center">
+<div style="width: 80%; border: 1px solid">International Federation of Associated Wrestling Styles / Greco-Roman Wrestling</div>
+</div>
+<br/>
+-->
+
+<table width="100%" height="70" border="0">
+<tr>
+<td width="10%" rowspan="3" height="70" align="center"><img src="img/fila-logo.png" height="86" border="0"/><br/></td>
+<td width="40%" rowspan="3" height="70" valign="top" align="center" class="bold"><div style="border: 1px solid; height: 100%">{competition}</div></td>
+<td width="10%" rowspan="3" height="70" align="center">&nbsp;<br/></td>
+<td width="40%" height="70">
+<table width="100%" cellpadding="1" cellspacing="0" border="1" height="70">
+<tr><td height="23">Arbitre - Referee</td><td>№</td></tr>
+<tr><td height="23">Juge - Judge</td><td>№</td></tr>
+<tr><td height="23">Chef de tapis - Mat Chairman</td><td>№</td></tr>
+</table>
+</tr>
+</table>
+<br/>
+
+<table width="100%" border="1"  cellpadding="1" cellspacing="0" >
+<tr><td>DATE</td><td>№ DE MATCH</td><td>POINDS - WEIGHT</td><td>STYLE</td><td>TOUR - ROUND</td><td>FINAL - PLACE</td><td>№ TAPIS - MAT</td></tr>
+<tr><td class="bold">{date}</td><td class="bold">{num}</td><td class="bold">{weight}</td><td class="bold">{style}</td><td class="bold">{round}</td><td class="bold">{place}</td><td class="bold">{mat}</td></tr>
+</table>
+<br/>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="48%" colspan="5" aling="center" class="h1 redborder">ROUGE - RED</td>
+<td width="5%" rowspan="3">&nbsp;</td>
+<td width="48%" colspan="5" aling="center" class="h1 blueborder">BLEU - BLUE</td>
+</tr>
+<tr>
+<td colspan="2" class="redborder" width="30%">NOM - NAME</td>
+<td colspan="2" class="redborder" width="15%" align="center">PAYS-COUNTRY</td>
+<td align="center" class="redborder" width="5%">№</td>
+<td colspan="2" class="blueborder" width="30%">NOM - NAME</td>
+<td colspan="2" align="center" class="blueborder" width="15%">PAYS-COUNTRY</td>
+<td align="center" class="blueborder" width="5%">№</td>
+</tr>
+<td colspan="2" class="redborder h1" width="30%">{red.title}</td>
+<td colspan="2" class="redborder" align="center" width="15%">{red.geo}</td>
+<td align="center" class="redborder" width="5%">{red.num}</td>
+<td colspan="2" class="blueborder h1" width="30%" >{blue.title}</td>
+<td colspan="2" align="center" class="blueborder" width="15%">{blue.geo}</td>
+<td align="center" class="blueborder" width="5%">{blue.num}</td>
+</tr>
+
+<tr>
+<td colspan="8">&nbsp;</td>
+</tr>
+
+<tr>
+<td rowspan="2" rowspan="2" class="redborder" width="5%">Manche</td>
+<td colspan="3" class="redborder" align="center" width="40%">POINTS TECHNIQUES / TECHNICAL POINTS</td>
+<td align="center" rowspan="2" class="redborder" width="5%">TOTAL</td>
+<td align="center" rowspan="2" class="blackborder" width="5%">TIME</td>
+<td rowspan="2" class="blueborder" width="5%">Period</td>
+<td colspan="3" class="blueborder" align="center" width="40%">POINTS TECHNIQUES / TECHNICAL POINTS</td>
+<td align="center" rowspan="2" class="blueborder" width="5%">TOTAL</td>
+</tr>
+<tr>
+<td colspan="2" class="redborder" align="center" width="30%">2 minutes</td>
+<td class="redborder" align="center" width="5%">30&Prime;</td>
+<td colspan="2" class="blueborder" align="center" width="30%">2 minutes</td>
+<td class="blueborder" align="center" width="5%">30&Prime;</td>
+</tr>
+<tr height="40">
+<td class="redborder" width="5%">1ere<br/>Manche</td>
+<td colspan="2" class="redborder" align="center" width="30%">&nbsp;</td>
+<td class="redborder" align="center" width="5%">&nbsp;</td>
+<td align="center" class="redborder" width="5%">&nbsp;</td>
+<td align="center" class="blackborder" width="5%">&nbsp;</td>
+<td class="blueborder" width="5%">1st<br/>Period</td>
+<td colspan="2" class="blueborder" align="center" width="30%">&nbsp;</td>
+<td class="blueborder" align="center" width="5%">&nbsp;</td>
+<td align="center" class="blueborder" width="5%">&nbsp;</td>
+</tr>
+<tr height="10">
+<td class="redborder" width="5%" nowrap="nowrap">PAUSE 30"</td>
+<td colspan="2" class="redborder" align="center" width="30%">&nbsp;</td>
+<td class="redborder" align="center" width="5%">&nbsp;</td>
+<td align="center" class="redborder" width="5%">&nbsp;</td>
+<td align="center" class="blackborder" width="5%">&nbsp;</td>
+<td class="blueborder" width="5%" nowrap="nowrap">PAUSE 30"</td>
+<td colspan="2" class="blueborder" align="center" width="30%">&nbsp;</td>
+<td class="blueborder" align="center" width="5%">&nbsp;</td>
+<td align="center" class="blueborder" width="5%">&nbsp;</td>
+</tr>
+<tr height="40">
+<td class="redborder" width="5%">2eme<br/>Manche</td>
+<td colspan="2" class="redborder" align="center" width="30%">&nbsp;</td>
+<td class="redborder" align="center" width="5%">&nbsp;</td>
+<td align="center" class="redborder" width="5%">&nbsp;</td>
+<td align="center" class="blackborder" width="5%">&nbsp;</td>
+<td class="blueborder" width="5%">2nd<br/>Period</td>
+<td colspan="2" class="blueborder" align="center" width="30%">&nbsp;</td>
+<td class="blueborder" align="center" width="5%">&nbsp;</td>
+<td align="center" class="blueborder" width="5%">&nbsp;</td>
+</tr>
+<tr height="10">
+<td class="redborder" width="5%" nowrap="nowrap">PAUSE 30"</td>
+<td colspan="2" class="redborder" align="center" width="30%">&nbsp;</td>
+<td class="redborder" align="center" width="5%">&nbsp;</td>
+<td align="center" class="redborder" width="5%">&nbsp;</td>
+<td align="center" class="blackborder" width="5%">&nbsp;</td>
+<td class="blueborder" width="5%" nowrap="nowrap">PAUSE 30"</td>
+<td colspan="2" class="blueborder" align="center" width="30%">&nbsp;</td>
+<td class="blueborder" align="center" width="5%">&nbsp;</td>
+<td align="center" class="blueborder" width="5%">&nbsp;</td>
+</tr>
+<tr height="40">
+<td class="redborder" width="5%">3eme<br/>Manche</td>
+<td colspan="2" class="redborder" align="center" width="30%">&nbsp;</td>
+<td class="redborder" align="center" width="5%">&nbsp;</td>
+<td align="center" class="redborder" width="5%">&nbsp;</td>
+<td align="center" class="blackborder" width="5%">&nbsp;</td>
+<td class="blueborder" width="5%">3rd<br/>Period</td>
+<td colspan="2" class="blueborder" align="center" width="30%">&nbsp;</td>
+<td class="blueborder" align="center" width="5%">&nbsp;</td>
+<td align="center" class="blueborder" width="5%">&nbsp;</td>
+</tr>
+</table>
+<br/>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr height="40">
+<td class="redborder" width="5%"></td>
+<td width="20%" >ROUGE - RED<br/>TOTAL</td>
+<td width="50%" align="center">POINTS TECHNIQUES - TECHNICAL POINTS<br/>BARRER LE PERDANT - CROSS OUT LOSER</td>
+<td align="right" width="20%">BLEU - BLUE<br/>TOTAL</td>
+<td align="center" class="blueborder" width="5%">&nbsp;</td>
+</tr>
+</table>
+<br/>
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr height="40">
+<td width="40%" align="right"> POINTS DE CLASSEMENT<br/>CLASSIFICATION POINTS</td>
+<td width="5%" class="redborder">&nbsp;</td>
+<td width="10%"></td>
+<td width="5%" class="blueborder">&nbsp;</td>
+<td width="40%"> POINTS DE CLASSEMENT<br/>CLASSIFICATION POINTS</td>
+</tr>
+</table>
+<br/>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td wdith="80%">&nbsp;<br/></td><td rowspan="3" width="20%" class="blackborder" align="center">HEURE EXACTE DE FIN<br/>DU MATCH<br/>EXACT TIME WHEN THE<br/>MATCH IS FINIISHED<br/>(Hour , 
+minute)</td></tr>
+<tr><td wdith="80%">&nbsp;<br/></td></tr>
+<tr><td wdith="80%" class="blackborder" height="20">VAINQUEUR - WINNER</td></tr>
+<tr><td wdith="80%" class="blackborder"></td><td width="20%" class="blackborder">&nbsp;<br/></td></tr>
+</table>
+<br/>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2" align="center">POINTS DE CLASSEMENT CLASSIFICATION POINTS</td></tr>
+<tr><td width="10%" class="blackborder">VT 5:0</td><td class="blackborder">VICTOIRE PAR TOMBE<br/>VICTORY BY FALL</td></tr>
+<tr><td width="10%" class="blackborder">VA 5:0</td><td class="blackborder">VICTOIRE PAR ABANDON<br/>VICTORY BY WITHDRAWAL</td></tr>
+<tr><td width="10%" class="blackborder">VB 5:0</td><td class="blackborder">VICTOIRE PAR BLESSURE<br/>VICTORY BY INJURY</td></tr>
+<tr><td width="10%" class="blackborder">VF 5:0</td><td class="blackborder">VICTOIRE PAR FORFAIT<br/>VICTORY FORFEIT</td></tr>
+<tr><td width="10%" class="blackborder">EV 5:0</td><td class="blackborder">DISQUALIFICATION DE TOUTE LA COMPETITION POUR VIOLATION DES REGLES<br/>DISQUALIFICATION FROM ANY COMPETITION DUE TO INFRIGEMENT OF THE RULES</td></tr>
+<tr><td width="10%" class="blackborder">EX 5:0</td><td class="blackborder">3 AVERTISSEMENTS "0" POUR FAUTE CONTRE LES REGLES (POUR L'ENSEMBLE DU<br/>MATCH) 3 CAUTIONS "0" DUE TO ERROR AGAINST THE RULES (FOR ALL THE BOUT)</td></tr>
+<tr><td width="10%" class="blackborder">ST 4:0</td><td class="blackborder">GRD. SUPERIORITE - 6 POINTS DE DIFFERENCE-LE PERDANT PAS DE POINTS<br/>GREAT SUPERIORITY - A DIFFERENCE OF 6 POINTS. THE LOSER WITHOUT ANY POINTS</td></tr>
+<tr><td width="10%" class="blackborder">SP 4:1</td><td class="blackborder">VICTOIRE PAR GRD. SUPERIORITE - LE PERDANT A MARQUE DES POINTS<br/>VICTOIRY BY TECHNICAL SUPERIORITY WITH THE LOSER SCORING TECHNICAL POINTS</td></tr>
+<tr><td width="10%" class="blackborder">PP 3:1</td><td class="blackborder">VICTOIRE AUX POINTS-LE PERDANT AVEC DES POINTS TECHNIQUES<br/>DECISION BY POINTS-THE LOSER WITH TECHNICAL POINTS</td></tr>
+<tr><td width="10%" class="blackborder">PO 3:0</td><td class="blackborder">VICTOIRE AUX POINTS-LE PERDANT SANS POINTS TECHNIQUES<br/>DECISION BY POINTS-THE LOSER WITHOUT TECHNICAL POINTS</td></tr>
+<tr><td width="10%" class="blackborder">E2 0:0</td><td class="blackborder">SI LES 2 LUTTEURS SONT DISQUALIFIES POUR VIOLATION DES REGLES<br/>IN CASE BOTH WRESTLERS HAVE BEEN DISQUAI. DUE TO INFR. OF THE RULES </td></tr>
+</table>
+<br/>
+
+<div style="float: right; width: 200px; height: 100px;">Signature</div>
+
+</body>
+</html>

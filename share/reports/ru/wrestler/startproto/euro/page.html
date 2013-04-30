@@ -1,0 +1,38 @@
+<div class="page">
+
+<div class="top">
+	<div class="top-left"><img src="img/fila-logo.png" width="80" border="0"/></div>
+	<div class="top-right"><img src="img/fsw-logo.png" width="70" border="0"/></div>
+	<div class="top-center"><div>Стартовый протокол</div></div>
+	<div class="top-center" style="font-size: 12pt;"><div>{competition}</div></div>
+	<div class="top-center" style="border: 0">Раунд: {round} / Тур: {tour} / Вес: {weight} / Мат: {mat}</div>
+</div>
+
+<div class="content">
+
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="ctable">
+	<tr class="head">
+	<td class="blackborder">№</td>
+	<td class="b_trb">Имя</td>
+	<td class="b_trb">Страна</td>
+	<td class="b_trb">Звание</td>
+	<td>RED</td>
+	<td class="blackborder">№ схватки</td>
+	<td>BLUE</td>
+	<td class="blackborder">№</td>
+	<td class="b_trb">Имя</td>
+	<td class="b_trb">Страна</td>
+	<td class="b_trb">Звание</td>
+	<td class="b_trb">Результат</td>
+	</tr>
+	{rows}
+	</table>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="referee">
+	<tr><td>Главный судья</td><td>{referee.chief.category}</td><td>&nbsp;</td><td>{referee.chief.title}</td></tr>
+	<tr><td>Главный секретарь</td><td>{secretary.chief.category}</td><td>&nbsp;</td><td>{secretary.chief.title}</td></tr>
+	</table>
+
+</div>
+
+</div> <!-- /page -->

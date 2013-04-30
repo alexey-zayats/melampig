@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Протокол соревнования</title>
+<style>
+body { margin: 0; padding: 0px 60px; font-family: Helvetica; font-size: 13pt; }
+
+.top { text-align: center}
+
+.top-left { float: left; width: 130px; height: 100px; border: 2px solid black; padding: 0; text-align: center; margin: 0;}
+.top-right { float: right; width: 130px; height: 100px; border: 2px solid black; padding: auto 0; text-align: center; margin: 0;}
+.top-left img, .top-right img { margin: 15px; }
+
+.top-center { margin: 0 150px 10px 150px; border: 2px solid black; text-align: center; font-weight: bold; padding: 5px; }
+.top-center div {overflow: hidden}
+
+.page {
+	border: 1px dotted green;
+	padding: 20px 0 0px;
+	maring: 0;
+	max-height: 1380px;
+	min-height: 1380px;
+	max-width: 830px;
+	min-width: 830px;
+	oveflow: hidden;
+	page-break-after: always;
+	page-break-before: always;
+}
+
+.content { padding: 0; text-align: center; }
+
+.total { text-align: center; margin-top: 40px; }
+.total .box {border: 2px solid black; padding: 5px 10px; margin-left: 100px}
+
+.ctable {  margin: 0 auto;}
+
+.wrestler {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 8pt;
+	line-height: 10px;
+}
+
+.wrestler tr { height: 15px; }
+.wrestler td { height: 15px; text-align: center; }
+
+.num, .sum, .p1, .p2, .p3, .pen{ min-width: 15px; min-height: 15px;  }
+.fio, .geo{ min-width: 60px; max-width: 60px; min-height: 30px; max-height: 30px; overflow-x: hidden; overflow-y: hidden;  }
+.fio div, .geo div { min-width: 60px; max-width: 60px; min-height: 15px; max-height: 20px; overflow-x: hidden; overflow-y: hidden;}
+
+.xsplit { line-height: 1px; font-size: 1px; max-height: 1px; min-height: 1px; height: 1px !important; }
+.xsplit td { line-height: 1px; font-size: 1px; max-height: 1px; min-height: 1px; height: 1px !important; }
+
+.b-all { border: 1px solid black; }
+.b-trb { border-top: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black;}
+.b-lrb { border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black;}
+.b-rb { border-right: 1px solid black; border-bottom: 1px solid black;}
+.b-b { border-bottom: 1px solid black;}
+.b-r { border-right: 1px solid black;}
+.b-t { border-top: 1px solid black;}
+.b-tr { border-top: 1px solid black; border-right: 1px solid black;}
+.b-ltr { border-left: 1px solid black; border-top: 1px solid black; border-right: 1px solid black;}
+.b-lt { border-left: 1px solid black; border-top: 1px solid black; }
+.b-lb { border-left: 1px solid black; border-bottom: 1px solid black; }
+
+.h-1-1 { line-height: 15px; }
+.h-1-2 { line-height: 22px;}
+
+.h-2-1 { line-height: 52px;}
+.h-2-2 { line-height: 52px; }
+
+.h-3-1 { line-height: 119px;}
+.h-3-2 { line-height: 119px; }
+
+
+.wrestler td + td + td + td + td + td + td + td { width: 10px; } 
+
+@media print { 
+	.page { border: 1px solid white !important; } 
+}
+
+.classement td { border: 1px solid black; text-align: center; font-size: 8pt; overflow: hidden}
+.classement { margin: 0 auto; border: 1px solid black; width: 90%; }
+.classement td + td { text-align: left; padding-left: 10px; }
+.classement .head { background-color: blue; color: white; font-style: italic; font-weight: bold}
+.classement .head td { padding: 5px }
+
+
+.country { margin: 0 auto; border: 1px solid black; width: 90%; }
+.country tr.head { background-color: blue; color: white; }
+.country tr.head td {  padding: 10px; font-style: italic; font-weight: bold; font-size: 12pt}
+.country td { border: 1px solid black; text-align: center; margin: 0; padding: 0 }
+.country td  img { margin: 2 5; width: 30px; }
+.country .total { font-weight: bold; }
+
+.country td + td + td + td + td + td + td + td + td { font-weight: bold; }
+
+.round-t {border: 2px solid black; margin: 5px; text-align: center}
+
+.r-0 { line-height: 0px; }
+.r-1 { line-height: 15px; }
+.r-2 { line-height: 30px; }
+.r-3 { line-height: 45px; }
+.r-4 { line-height: 60px; }
+
+</style>
+</head>
+<body>
+
+{page}
+
+</body>
+</html>

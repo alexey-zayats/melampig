@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StartUpDialog</class>
+ <widget class="QDialog" name="StartUpDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>549</width>
+    <height>307</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Startup</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../melampig.qrc">
+    <normaloff>:/icons/user_gray.png</normaloff>:/icons/user_gray.png</iconset>
+  </property>
+  <layout class="QGridLayout">
+   <property name="margin">
+    <number>9</number>
+   </property>
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <item row="5" column="1">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="6" column="1">
+    <widget class="QPushButton" name="closeButton">
+     <property name="text">
+      <string>Close</string>
+     </property>
+     <property name="icon">
+   <iconset resource="../../../melampig.qrc">
+       <normaloff>:/icons/cancel.png</normaloff>:/icons/cancel.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Esc</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QPushButton" name="editProject">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Edit</string>
+     </property>
+     <property name="icon">
+   <iconset resource="../../../melampig.qrc">
+       <normaloff>:/icons/page_edit.png</normaloff>:/icons/page_edit.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>F2</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="runMnager">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Run</string>
+     </property>
+     <property name="icon">
+   <iconset resource="../../../melampig.qrc">
+       <normaloff>:/start</normaloff>:/start</iconset>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="1">
+    <widget class="QPushButton" name="deleteProject">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+     <property name="icon">
+   <iconset resource="../../../melampig.qrc">
+       <normaloff>:/icons/page_delete.png</normaloff>:/icons/page_delete.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Del</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="addProject">
+     <property name="text">
+      <string>Add</string>
+     </property>
+     <property name="icon">
+   <iconset resource="../../../melampig.qrc">
+       <normaloff>:/icons/page_add.png</normaloff>:/icons/page_add.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Ins</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" rowspan="7">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Database list</string>
+     </property>
+     <layout class="QGridLayout">
+      <property name="margin">
+       <number>5</number>
+      </property>
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item row="1" column="0">
+       <widget class="QLabel" name="dbInfo">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QTreeWidget" name="projectTree">
+        <column>
+         <property name="text">
+          <string notr="true">1</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="1" margin="1"/>
+ <tabstops>
+  <tabstop>projectTree</tabstop>
+  <tabstop>runMnager</tabstop>
+  <tabstop>addProject</tabstop>
+  <tabstop>editProject</tabstop>
+  <tabstop>deleteProject</tabstop>
+  <tabstop>closeButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../../melampig.qrc"/>
+ </resources>
+ <connections/>
+</ui>

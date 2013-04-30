@@ -1,0 +1,43 @@
+<div class="page">
+
+<div class="top">
+	<div class="top-left"><img src="img/fila-logo.png" width="80" border="0"/></div>
+	<div class="top-right"><img src="img/fsw-logo.png" width="70" border="0"/></div>
+	<div class="top-center"><div>Стартовый протокол</div></div>
+	<div class="top-center" style="font-size: 12pt;"><div>{competition}</div></div>
+	<div class="top-center" style="border: 0">Раунд: {round} / Тур: {tour} / Вес: {weight} / Мат: {mat}</div>
+</div>
+
+<div class="content">
+
+	<table width="100%" border="0" cellpadding="0" cellspacing="0"  class="ctable">
+	<tr class="head">
+	<td rowspan="2" class="blackborder">№ пары</td>
+	<td rowspan="2" class="b_trb">№</td>
+	<td rowspan="2" class="b_trb">Имя</td>
+	<td rowspan="2" class="b_trb">Страна</td>
+	<td rowspan="2" class="b_trb">Звание</td>
+	<td colspan="6" class="b_trb">Результаты</td>
+	<td rowspan="2" class="b_trb">Сумма</td>
+	<td rowspan="2" class="b_trb">Время</td>
+	<td rowspan="2" class="b_trb">Результаты</td>
+	</tr>
+	<tr class="head">
+	<td class="b_br">1</td>
+	<td class="b_br">рез.<br/>1 раунд</td>
+	<td class="b_br">2</td>
+	<td class="b_br">рез.<br/>2 раунд</td>
+	<td class="b_br">3</td>
+	<td class="b_br">рез.<br/>3 раунд</td>
+	</tr>
+	{rows}
+	</table>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="referee">
+	<tr><td>Главный судья</td><td>{referee.chief.category}</td><td>&nbsp;</td><td>{referee.chief.title}</td></tr>
+	<tr><td>Главный секретарь</td><td>{secretary.chief.category}</td><td>&nbsp;</td><td>{secretary.chief.title}</td></tr>
+	</table>
+
+</div>
+
+</div> <!-- /page -->

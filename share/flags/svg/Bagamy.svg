@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="800"
+	height="400"
+	viewBox="0 0 6 3">
+<clipPath id="a">
+<rect width="6" height="3"/>
+</clipPath>
+
+<g  clip-path="url(#a)">
+<rect width="6" height="3" fill="#00ABC9" id="blue_stripes" />
+<rect width="6" height="1" y="1" fill="#FAE042" id="yellow_stripe" />
+
+<comment>Width and height of these rectangles just have to be big enough to fill the triangle mask after rotation:</comment>
+<clipPath id="tt">
+<rect width="6" height="3" transform="rotate(30 0 0)" />
+</clipPath>
+<g clip-path="url(#tt)">
+<rect width="6" height="3" transform="rotate(-30 0 3)" fill="#000" id="black_triangle"/>
+</g>
+</g>
+</svg>
