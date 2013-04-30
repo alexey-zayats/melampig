@@ -27,11 +27,6 @@ body { margin: 0; padding: 0px 60px; font-family: Helvetica; font-size: 13pt; }
 	page-break-before: always;
 }
 
-@media print { 
-	.page { border: none !important; } 
-}
-
-
 .content { padding: 0; text-align: center; }
 
 .total { text-align: center; margin-top: 40px; }
@@ -50,7 +45,7 @@ body { margin: 0; padding: 0px 60px; font-family: Helvetica; font-size: 13pt; }
 .wrestler td { height: 15px; text-align: center; }
 
 .num, .sum, .p1, .p2, .p3, .pen{ min-width: 15px; min-height: 15px;  }
-.fio, .geo{ min-width: 60px; max-width: 60px; min-height: 15px; max-height: 20px; overflow-x: hidden; overflow-y: hidden; }
+.fio, .geo{ min-width: 60px; max-width: 60px; min-height: 30px; max-height: 30px; overflow-x: hidden; overflow-y: hidden;  }
 .fio div, .geo div { min-width: 60px; max-width: 60px; min-height: 15px; max-height: 20px; overflow-x: hidden; overflow-y: hidden;}
 
 .xsplit { line-height: 1px; font-size: 1px; max-height: 1px; min-height: 1px; height: 1px !important; }
@@ -80,11 +75,11 @@ body { margin: 0; padding: 0px 60px; font-family: Helvetica; font-size: 13pt; }
 
 .wrestler td + td + td + td + td + td + td + td { width: 10px; } 
 
-@media print {
-	.page { border: 0px dotted green; }
+@media print { 
+	.page { border: 1px solid white !important; } 
 }
 
-.classement td { border: 1px solid black; text-align: center; font-size: 9pt;}
+.classement td { border: 1px solid black; text-align: center; font-size: 8pt; overflow: hidden}
 .classement { margin: 0 auto; border: 1px solid black; width: 90%; }
 .classement td + td { text-align: left; padding-left: 10px; }
 .classement .head { background-color: blue; color: white; font-style: italic; font-weight: bold}

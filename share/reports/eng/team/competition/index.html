@@ -15,27 +15,27 @@ body { margin: 0; padding: 0px 60px; font-family: Helvetica; font-size: 13pt; }
 .top-center div {overflow: hidden}
 
 .page {
-border: 1px dotted green;
-padding: 20px 0 0px;
-maring: 0;
-max-height: 1380px;
-min-height: 1380px;
-max-width: 830px;
-min-width: 830px;
-oveflow: hidden;
-page-break-after: always;
-page-break-before: always;
+	border: 1px dotted green;
+	padding: 20px 0 0px;
+	maring: 0;
+	max-height: 1380px;
+	min-height: 1380px;
+	max-width: 830px;
+	min-width: 830px;
+	oveflow: hidden;
+	page-break-after: always;
+	page-break-before: always;
 }
 
-@media print {
-	.page { border: none !important; }
+@media print { 
+	.page { border: none !important; } 
 }
 
 
 .content { padding: 0 20px; }
 
 .total { text-align: center; margin-top: 40px; }
-.total .box {border: 2px solid black; padding: 5px 10px; margin-left: 100px}
+.total .box { border: 2px solid black; padding: 5px 10px; margin-left: 100px}
 
 
 .wrestler {
@@ -69,19 +69,25 @@ border-bottom: 1px solid black;}
 .b-r { border-right: 1px solid black;}
 .b-t { border-top: 1px solid black;}
 
-.b-tr { border-top: 1px solid black;
-border-right: 1px solid black;}
-
-.b-ltr { border-left: 1px solid black;
-border-top: 1px solid black;
-border-right: 1px solid black;}
-
-.b-lt { border-left: 1px solid black;
-border-top: 1px solid black;
+.b-tr { 
+	border-top: 1px solid black;
+	border-right: 1px solid black;
 }
 
-.b-lb { border-left: 1px solid black;
-border-bottom: 1px solid black;
+.b-ltr { 
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.b-lt { 
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+}
+
+.b-lb { 
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
 .h-1  { line-height: 15px; }
@@ -94,6 +100,19 @@ border-bottom: 1px solid black;
 .winner { min-width: 120px }
 .rank td { padding: 50px; text-align: center; }
 .rank td+td+td { width: 70%; text-align: left; }
+
+table.trg {
+	width: 90%;
+	border-collapse:collapse;
+	margin: 0 auto;
+}
+
+table.trg td { text-align: center; border: 1px solid black; padding: 3; font-weight: bold; }
+table.points td { text-align: center; border: 0; }
+table.points td.fc { text-align: center; border-top: 1px solid black; font-weight: normal; }
+
+table.trg td+td+td+td+td+td+td+td { font-weight: normal; }
+table.trg td+td+td+td+td+td+td+td+td { font-weight: bold; }
 </style>
 </head>
 <body>
