@@ -815,4 +815,36 @@ namespace Melampig
 
         setFontsSize();
     }
+
+    void FightDisplayFila::toggleGR18052013(bool off)
+    {
+        if ( off ) {
+            displayUi->redThirdLable1->hide();
+            displayUi->redThirdLable2->hide();
+            displayUi->redThirdLable3->hide();
+
+            displayUi->blueThirdLable3->hide();
+            displayUi->blueThirdLable2->hide();
+            displayUi->blueThirdLable1->hide();
+
+            displayUi->line_9->hide();
+            displayUi->line_14->hide();
+            displayUi->line_5->hide();
+            displayUi->line_11->hide();
+        } else {
+            displayUi->redThirdLable1->show();
+            displayUi->redThirdLable2->show();
+            displayUi->redThirdLable3->show();
+
+            displayUi->blueThirdLable3->show();
+            displayUi->blueThirdLable2->show();
+            displayUi->blueThirdLable1->show();
+
+            displayUi->line_9->show();
+            displayUi->line_14->show();
+
+            displayUi->line_5->show();
+            displayUi->line_11->show();
+        }
+    }
 }
