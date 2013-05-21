@@ -119,64 +119,64 @@ namespace Melampig
         QString sql;
 
         if ( tour ) {
-        sql = "SELECT \
-                cw1.sorder as red_num, \
-                w1.title as red_name, \
-                g1.title as red_geo, \
-                r1.acr as red_rang, \
-                f.num as fight_num, \
-                cw2.sorder as blue_num, \
-                w2.title as blue_name, \
-                g2.title as blue_geo, \
-                r2.acr as blue_rang \
-            FROM \
-                fight as f \
-                left join competition_wrestler as cw1 on cw1.wrestler = f.red AND cw1.competition = f.competition and cw1.weight = f.weight and cw1.style = f.style \
-                left join competition_wrestler as cw2 on cw2.wrestler = f.blue AND cw2.competition = f.competition and cw2.weight = f.weight and cw2.style = f.style \
-                left join wrestler as w1 ON w1.id = f.red \
-                left join wrestler as w2 on w2.id = f.blue \
-                left join geo as g1 on g1.id = w1.geo \
-                left join geo as g2 on g2.id = w2.geo \
-                left join rang as r1 on r1.id = w1.rang \
-                left join rang as r2 on r2.id = w2.rang \
-            WHERE \
-                f.competition = ? AND \
-                f.style = ? AND \
-                f.weight = ? AND \
-                f.cround = ? AND  \
-                f.ctour = ? AND  \
-                f.mat = ? \
-            ORDER BY \
-                f.num";
-        } else {
-                    sql = "SELECT \
-                            cw1.sorder as red_num, \
-                            w1.title as red_name, \
-                            g1.title as red_geo, \
-                            r1.acr as red_rang, \
-                            f.num as fight_num, \
-                            cw2.sorder as blue_num, \
-                            w2.title as blue_name, \
-                            g2.title as blue_geo, \
-                            r2.acr as blue_rang \
-                        FROM \
-                            fight as f \
-                            left join competition_wrestler as cw1 on cw1.wrestler = f.red AND cw1.competition = f.competition and cw1.weight = f.weight and cw1.style = f.style \
-                            left join competition_wrestler as cw2 on cw2.wrestler = f.blue AND cw2.competition = f.competition and cw2.weight = f.weight and cw2.style = f.style \
-                            left join wrestler as w1 ON w1.id = f.red \
-                            left join wrestler as w2 on w2.id = f.blue \
-                            left join geo as g1 on g1.id = w1.geo \
-                            left join geo as g2 on g2.id = w2.geo \
-                            left join rang as r1 on r1.id = w1.rang \
-                            left join rang as r2 on r2.id = w2.rang \
-                        WHERE \
-                            f.competition = ? AND \
-                            f.style = ? AND \
-                            f.weight = ? AND \
-                            f.cround = ? AND  \
-                            f.mat = ? \
+            sql = "SELECT \
+                    cw1.sorder as red_num, \
+                    w1.title as red_name, \
+                    g1.title as red_geo, \
+                    r1.acr as red_rang, \
+                    f.num as fight_num, \
+                    cw2.sorder as blue_num, \
+                    w2.title as blue_name, \
+                    g2.title as blue_geo, \
+                    r2.acr as blue_rang \
+                    FROM \
+                    fight as f \
+                    left join competition_wrestler as cw1 on cw1.wrestler = f.red AND cw1.competition = f.competition and cw1.weight = f.weight and cw1.style = f.style \
+                    left join competition_wrestler as cw2 on cw2.wrestler = f.blue AND cw2.competition = f.competition and cw2.weight = f.weight and cw2.style = f.style \
+                    left join wrestler as w1 ON w1.id = f.red \
+                    left join wrestler as w2 on w2.id = f.blue \
+                    left join geo as g1 on g1.id = w1.geo \
+                    left join geo as g2 on g2.id = w2.geo \
+                    left join rang as r1 on r1.id = w1.rang \
+                    left join rang as r2 on r2.id = w2.rang \
+                    WHERE \
+                    f.competition = ? AND \
+                                      f.style = ? AND \
+                                                  f.weight = ? AND \
+                                                               f.cround = ? AND  \
+                                                                            f.ctour = ? AND  \
+                                                                                        f.mat = ? \
                         ORDER BY \
-                            f.num";
+                        f.num";
+        } else {
+                        sql = "SELECT \
+                    cw1.sorder as red_num, \
+                        w1.title as red_name, \
+                        g1.title as red_geo, \
+                        r1.acr as red_rang, \
+                        f.num as fight_num, \
+                        cw2.sorder as blue_num, \
+                        w2.title as blue_name, \
+                        g2.title as blue_geo, \
+                        r2.acr as blue_rang \
+                        FROM \
+                        fight as f \
+                        left join competition_wrestler as cw1 on cw1.wrestler = f.red AND cw1.competition = f.competition and cw1.weight = f.weight and cw1.style = f.style \
+                    left join competition_wrestler as cw2 on cw2.wrestler = f.blue AND cw2.competition = f.competition and cw2.weight = f.weight and cw2.style = f.style \
+                    left join wrestler as w1 ON w1.id = f.red \
+                    left join wrestler as w2 on w2.id = f.blue \
+                    left join geo as g1 on g1.id = w1.geo \
+                    left join geo as g2 on g2.id = w2.geo \
+                    left join rang as r1 on r1.id = w1.rang \
+                    left join rang as r2 on r2.id = w2.rang \
+                    WHERE \
+                    f.competition = ? AND \
+                                      f.style = ? AND \
+                                                  f.weight = ? AND \
+                                                               f.cround = ? AND  \
+                                                                            f.mat = ? \
+                        ORDER BY \
+                        f.num";
         }
 
         QSqlQuery query(keeper->database());
@@ -265,8 +265,8 @@ namespace Melampig
                     rows << QString("<td class='b_br'>&nbsp;</td>");
                     rows << QString("<td class='b_br'>&nbsp;</td>");
                     rows << QString("<td class='b_br'>&nbsp;</td>");
-                    rows << QString("<td class='b_br'>&nbsp;</td>");
-                    rows << QString("<td class='b_br'>&nbsp;</td>");
+                    // rows << QString("<td class='b_br'>&nbsp;</td>");
+                    // rows << QString("<td class='b_br'>&nbsp;</td>");
                     rows << QString("<td class='b_br'>&nbsp;</td>");
                     rows << QString("<td class='b_br'>&nbsp;</td>");
                     rows << QString("<td class='b_br'>&nbsp;</td>");
@@ -281,8 +281,8 @@ namespace Melampig
                     rows << QString("<td class='b_br'>&nbsp;</td>");
                     rows << QString("<td class='b_br'>&nbsp;</td>");
                     rows << QString("<td class='b_br'>&nbsp;</td>");
-                    rows << QString("<td class='b_br'>&nbsp;</td>");
-                    rows << QString("<td class='b_br'>&nbsp;</td>");
+                    // rows << QString("<td class='b_br'>&nbsp;</td>");
+                    // rows << QString("<td class='b_br'>&nbsp;</td>");
                     rows << QString("<td class='b_br'>&nbsp;</td>");
                     rows << QString("<td class='b_br'>&nbsp;</td>");
                     rows << QString("<td class='b_br'>&nbsp;</td>");
