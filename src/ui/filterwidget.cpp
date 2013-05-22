@@ -111,6 +111,10 @@ namespace Melampig
 						flag = Equal;
 					}
 
+                    if (a->getType() == Attr::Bool) {
+                        flag = Equal;
+                    }
+
 					if ( opts.size() > 0 ) {
 						flag |= And;
 					}

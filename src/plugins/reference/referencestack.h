@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QModelIndex>
 
+#include <orm.h>
+
 namespace Ui {
     class ReferenceStack;
 }
@@ -28,6 +30,10 @@ namespace Melampig
 		Keeper *keeper;
 		Ui::ReferenceStack *ui;
 		QStringListModel *model;
+        QWidget *parentWidget;
+
+        QHash<QString, ObjectType> refs;
+        QStringList itemList;
 	};
 }
 

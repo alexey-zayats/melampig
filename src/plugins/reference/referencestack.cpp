@@ -12,11 +12,11 @@ namespace Melampig
 	ReferenceStack::ReferenceStack(Keeper *keeper, QWidget *parent) :
 		QMainWindow(parent),
 		keeper(keeper),
-		ui(new Ui::ReferenceStack)
+        ui(new Ui::ReferenceStack),
+        parentWidget(parent)
 	{
 		ui->setupUi(this);
 
-		QHash<QString, ObjectType> refs;
 		refs.insert(tr("Action"), OAction);
 		refs.insert(tr("Address type"), OAddressType);
 		refs.insert(tr("Age"), OAge);
@@ -40,42 +40,23 @@ namespace Melampig
 		refs.insert(tr("Weight"), OWeight);
 		refs.insert(tr("Wrestler"), OWrestler);
 
-		QStringList list;
+        itemList = refs.keys();
+        qSort(itemList);
 
-		TQueryMap opt;
-		ModelType mt;
-		Object *o = 0;
-		ObjectType ot;
-		QWidget *widget = 0;
-		QHash<QString, ObjectType>::iterator it = refs.begin();
+        QWidget *w = 0;
+        for( int i = 0; i < itemList.size(); i++ ) {
+            w = new QWidget(this);
+            w->setObjectName( QString("placeholder-%1").arg(i) );
+            ui->stackedWidget->insertWidget(i, w);
+        }
 
-		for( ; it != refs.end(); ++it )
-		{
-			list << it.key();
+        model = new QStringListModel(itemList);
+        ui->listView->setModel(model);
 
-			ot = it.value();
-			o = keeper->objectByType( ot );
-			mt = o->getModelType();
+        ui->splitter->widget(0)->setMaximumWidth(200);
 
-			delete o;
-
-			switch( mt )
-			{
-				case aList:  widget  = new ListWidget( ot, keeper, opt, parent ); break;
-				case aTable: widget  = new TableWidget( ot, keeper, opt, parent ); break;
-				case aTree:  widget  = new TreeWidget( ot, keeper, opt, parent ); break;
-			}
-
-			ui->stackedWidget->addWidget(widget);
-		}
-
-		model = new QStringListModel(list);
-		ui->listView->setModel(model);
-
-		ui->splitter->widget(0)->setMaximumWidth(200);
-
-		connect(ui->listView, SIGNAL(clicked(QModelIndex)), this, SLOT(listView_activated(QModelIndex)));
-		connect(ui->listView, SIGNAL(activated(QModelIndex)), this, SLOT(listView_activated(QModelIndex)));
+        connect(ui->listView, SIGNAL(clicked(QModelIndex)), this, SLOT(listView_activated(QModelIndex)));
+        connect(ui->listView, SIGNAL(activated(QModelIndex)), this, SLOT(listView_activated(QModelIndex)));
 	}
 
 	ReferenceStack::~ReferenceStack()
@@ -85,11 +66,36 @@ namespace Melampig
 
 	void ReferenceStack::listView_activated(QModelIndex index)
 	{
-		if ( !index.isValid() ) return;
+        if ( !index.isValid() ) return;
 
-		int row = index.row();
-//		QString data = model->data(index, Qt::DisplayRole).toString();
-		ui->stackedWidget->setCurrentIndex(row);
+        int row = index.row();
+
+        QWidget *w = ui->stackedWidget->widget(row);
+
+        if ( w->objectName().compare(QString("placeholder-%1").arg(row)) == 0 )
+        {
+            ui->stackedWidget->removeWidget(w);
+            delete w;
+
+            TQueryMap opt;
+
+
+            ObjectType ot = refs[itemList.at(row)];
+            Object     *o = keeper->objectByType( ot );
+            ModelType  mt = o->getModelType();
+            delete o;
+
+            switch( mt )
+            {
+                case aList:  w  = new ListWidget( ot, keeper, opt, parentWidget ); break;
+                case aTable: w  = new TableWidget( ot, keeper, opt, parentWidget ); break;
+                case aTree:  w  = new TreeWidget( ot, keeper, opt, parentWidget ); break;
+            }
+
+            ui->stackedWidget->insertWidget(row, w);
+        }
+
+        ui->stackedWidget->setCurrentIndex(row);
 	}
 
 }
