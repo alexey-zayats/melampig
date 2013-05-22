@@ -12,7 +12,6 @@ namespace Melampig
 TableModel::TableModel(Object *obj, Keeper *keeper, QObject *parent) :
     QAbstractTableModel(parent), obj(obj), keeper(keeper), parentWidget((QWidget*)parent)
 {
-    //        qDebug() << Q_FUNC_INFO;
     rows = 0;
     limit = 100;
     offset = 0;
@@ -21,20 +20,17 @@ TableModel::TableModel(Object *obj, Keeper *keeper, QObject *parent) :
 
 TableModel::~TableModel ()
 {
-    //        qDebug() << Q_FUNC_INFO;
     qDeleteAll(record);
     record.clear();
 }
 
 int TableModel::rowCount(const QModelIndex &/*parent*/) const
 {
-    //        qDebug() << Q_FUNC_INFO << rows;
     return record.size(); // rows
 }
 
 int TableModel::columnCount(const QModelIndex &/*parent*/) const
 {
-    //        qDebug() << Q_FUNC_INFO << attr.size();
     return attr.size();
 }
 
@@ -147,14 +143,11 @@ QVariant TableModel::data(const QModelIndex &index, int role) const
 
 bool TableModel::canFetchMore ( const QModelIndex &/*parent*/) const
 {
-    //        qDebug() << Q_FUNC_INFO << record.size() << " < " <<  rows << " = " << (record.size() < rows);
     return record.size() < rows;
 }
 
 void TableModel::fetchMore ( const QModelIndex &/*parent*/)
 {
-    //        qDebug() << Q_FUNC_INFO;
-
     Object *o = 0;
     TQueryMap opt = options;
 
@@ -165,12 +158,9 @@ void TableModel::fetchMore ( const QModelIndex &/*parent*/)
     opt.insert("limit", itemsToFetch );
     opt.insert("offset", offset );
 
-
-
     beginInsertRows(QModelIndex(), size, size+itemsToFetch-1);
 
     QList<Object*> list = keeper->getObjectList(obj->getType(), opt);
-    //        qDebug() << Q_FUNC_INFO << "LIST.SIZE = " << list.size() << "; (size+itemsToFetch) = " << (size+itemsToFetch);
 
     for( int i = 0; i < list.size(); i++)
     {
@@ -206,7 +196,6 @@ void TableModel::fetchMore ( const QModelIndex &/*parent*/)
         }
     }
 
-    //        qDebug() << Q_FUNC_INFO << record.size();
     offset += itemsToFetch;
 
     QHash<ObjectType, QList<QVariant> >::const_iterator it;
@@ -220,7 +209,6 @@ void TableModel::fetchMore ( const QModelIndex &/*parent*/)
 
 void TableModel::fillRefMap(const ObjectType &type, const QList<QVariant> &idlist)
 {
-    //        qDebug() << Q_FUNC_INFO;
     QList<QVariant> data;
     for( int i = 0; i < idlist.size(); i++ )
     {
@@ -313,12 +301,6 @@ bool TableModel::setData(const QModelIndex &index,
         case Attr::Bool:
             o->set(aname, QString(value.toBool() ? "true" : "false"));
             break;
-            //            case Attr::ObjectRef:
-            //                qDebug() << value;
-            //                if ( value.toInt() == 0 ) {
-            //                    QMessageBox::critical( 0, QObject::tr("Error"), value.toString() );
-            //                }
-            //                break;
         default: {
             o->set(aname, a->isArray() ? Object::toArray(value.toStringList()) :  value.toString());
             break;
@@ -423,13 +405,10 @@ bool TableModel::removeRows(int position, int /*count*/, const QModelIndex &pare
 void TableModel::setQueryOptions(const TQueryMap &opt)
 {
     options = opt;
-    //        qDebug() << Q_FUNC_INFO << opt;
 }
 
 void TableModel::initModel()
 {
-    //        qDebug() << Q_FUNC_INFO;
-
     offset = 0;
 
     beginResetModel();
@@ -460,8 +439,8 @@ void TableModel::initModel()
 
     options.insert("order", QStringList() << "id" );
 
-    if ( rows > 0 )
-        fetchMore(QModelIndex());
+//    if ( rows > 0 )
+//        fetchMore(QModelIndex());
 
 }
 
@@ -498,8 +477,6 @@ Object *TableModel::getObject(const QModelIndex &index)
 
 void TableModel::sort ( int column, Qt::SortOrder order )
 {
-    //        qDebug() << Q_FUNC_INFO;
-
     offset = 0;
 
     beginResetModel();
@@ -511,7 +488,5 @@ void TableModel::sort ( int column, Qt::SortOrder order )
     fetchMore(QModelIndex());
 
     endResetModel();
-
-    //        qDebug() << Q_FUNC_INFO << options;
 }
 }
