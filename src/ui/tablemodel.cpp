@@ -159,9 +159,10 @@ void TableModel::fetchMore ( const QModelIndex &/*parent*/)
 //    opt.insert("offset", offset );
 
 //    beginInsertRows(QModelIndex(), size, size+itemsToFetch-1);
-    beginInsertRows(QModelIndex(), size, record.size());
 
     QList<Object*> list = keeper->getObjectList(obj->getType(), opt);
+
+    beginInsertRows(QModelIndex(), 0, list.size()-1);
 
     for( int i = 0; i < list.size(); i++)
     {
@@ -417,8 +418,6 @@ void TableModel::initModel()
     record.clear();
     attr.clear();
 
-
-
     Attr *a = 0;
     views = obj->getViewItem();
     for( int i = 0; i < views.size(); i++)
@@ -439,10 +438,6 @@ void TableModel::initModel()
     rows = keeper->countObjects(obj->getType(), opts);
 
     options.insert("order", QStringList() << "id" );
-
-//    if ( rows > 0 )
-//        fetchMore(QModelIndex());
-
 }
 
 QItemDelegate *TableModel::getItemDelegate(int idx)

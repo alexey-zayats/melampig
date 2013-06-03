@@ -94,6 +94,7 @@ TableWidget::~TableWidget()
 void TableWidget::actionRefresh_clicked()
 {
     model->initModel();
+//    model->fetchMore(QModelIndex());
 }
 
 void TableWidget::setModelQueryOptions(const TQueryMap &opt)
