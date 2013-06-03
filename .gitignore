@@ -224,3 +224,5 @@ Makefile*
 *.exp
 *.pro.user*
 *.pro.user
+
+melampig.pro.user
