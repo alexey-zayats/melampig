@@ -152,13 +152,27 @@ namespace Melampig
         displayUi->timerLabel->setFont(font9);
 
         int x = settings.value("image-size/pen", 24).toInt();
-        displayUi->redPen1->setMaximumSize(QSize(x,x));
-        displayUi->redPen2->setMaximumSize(QSize(x,x));
-        displayUi->redPen3->setMaximumSize(QSize(x,x));
 
-        displayUi->bluePen1->setMaximumSize(QSize(x,x));
-        displayUi->bluePen2->setMaximumSize(QSize(x,x));
-        displayUi->bluePen3->setMaximumSize(QSize(x,x));
+        // FIXME: possbile memory leak...
+        bluePenPic = new QPixmap(bluePenPic->scaledToWidth(x));
+        if ( displayUi->bluePen1->pixmap() != 0 ) displayUi->bluePen1->setPixmap(*bluePenPic);
+        if ( displayUi->bluePen2->pixmap() != 0 ) displayUi->bluePen2->setPixmap(*bluePenPic);
+        if ( displayUi->bluePen3->pixmap() != 0 ) displayUi->bluePen3->setPixmap(*bluePenPic);
+
+        redPenPic = new QPixmap(redPenPic->scaledToWidth(x));
+        if ( displayUi->redPen1->pixmap() != 0 ) displayUi->redPen1->setPixmap(*redPenPic);
+        if ( displayUi->redPen2->pixmap() != 0 ) displayUi->redPen2->setPixmap(*redPenPic);
+        if ( displayUi->redPen3->pixmap() != 0 ) displayUi->redPen3->setPixmap(*redPenPic);
+
+        blackPenPic = new QPixmap(blackPenPic->scaledToWidth(x));
+
+        displayUi->redPen1->setMinimumSize(QSize(x,x));
+        displayUi->redPen2->setMinimumSize(QSize(x,x));
+        displayUi->redPen3->setMinimumSize(QSize(x,x));
+
+        displayUi->bluePen1->setMinimumSize(QSize(x,x));
+        displayUi->bluePen2->setMinimumSize(QSize(x,x));
+        displayUi->bluePen3->setMinimumSize(QSize(x,x));
 
         redFlagWidget->setMaximumWidth(settings.value("flag/width", 200).toInt());
         redFlagWidget->setMaximumHeight(settings.value("flag/height", 100).toInt());

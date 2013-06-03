@@ -155,10 +155,11 @@ void TableModel::fetchMore ( const QModelIndex &/*parent*/)
     int remaining = rows - size;
     int itemsToFetch = qMin(limit, remaining);
 
-    opt.insert("limit", itemsToFetch );
-    opt.insert("offset", offset );
+//    opt.insert("limit", itemsToFetch );
+//    opt.insert("offset", offset );
 
-    beginInsertRows(QModelIndex(), size, size+itemsToFetch-1);
+//    beginInsertRows(QModelIndex(), size, size+itemsToFetch-1);
+    beginInsertRows(QModelIndex(), size, record.size());
 
     QList<Object*> list = keeper->getObjectList(obj->getType(), opt);
 

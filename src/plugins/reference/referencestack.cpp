@@ -57,6 +57,8 @@ namespace Melampig
 
         connect(ui->listView, SIGNAL(clicked(QModelIndex)), this, SLOT(listView_activated(QModelIndex)));
         connect(ui->listView, SIGNAL(activated(QModelIndex)), this, SLOT(listView_activated(QModelIndex)));
+
+        this->listView_activated(model->index(0));
 	}
 
 	ReferenceStack::~ReferenceStack()
