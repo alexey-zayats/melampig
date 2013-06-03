@@ -354,6 +354,9 @@ IF byteam = TRUE THEN RETURN NEW; END IF;
 		WHERE 
 			winner = NEW.winner
 			AND cround IN (qualification_round_id, selection_round_id)
+			AND competition = NEW.competition
+			AND style = NEW.style 
+			AND weight = NEW.weight
 		ORDER BY 
 			id
 	LOOP
