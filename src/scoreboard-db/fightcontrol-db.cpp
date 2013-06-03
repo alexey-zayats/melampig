@@ -321,6 +321,7 @@ namespace Melampig
         Style *s = new Style( object->get("style").toInt(), keeper );
 
         isGR_18052013 = s->get("name").compare("GR") == 0;
+        isGR_18052013 = true;
 
         ui->styleLabel->setText(s->get("name"));
 
