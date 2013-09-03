@@ -102,7 +102,7 @@ namespace Melampig
 				QString v = getWidgetData( a, w );
 				if ( !v.isEmpty() ) {
 
-					int flag = Like;
+                    int flag = Like | Case;
 
 					bool ok;
 					v.toInt(&ok, 10);
@@ -110,6 +110,10 @@ namespace Melampig
 					if ( ok ) {
 						flag = Equal;
 					}
+
+                    if (a->getType() == Attr::Bool) {
+                        flag = Equal;
+                    }
 
 					if ( opts.size() > 0 ) {
 						flag |= And;

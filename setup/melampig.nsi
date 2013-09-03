@@ -17,7 +17,7 @@
   InstallDirRegKey HKCU "Software\Melampig" ""
 
   ;Request application privileges for Windows Vista
-  RequestExecutionLevel user
+  RequestExecutionLevel admin
 
 ;--------------------------------
 ;Interface Settings

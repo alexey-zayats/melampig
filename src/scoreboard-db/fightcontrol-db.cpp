@@ -24,6 +24,7 @@ namespace Melampig
     {
         ui->setupUi(this);
 
+        isGR_18052013 = false;
 //        display = new FightDisplay();
         display = new FightDisplayFila();
         display->showSplash();
@@ -318,6 +319,10 @@ namespace Melampig
 
         // style
         Style *s = new Style( object->get("style").toInt(), keeper );
+
+        isGR_18052013 = s->get("name").compare("GR") == 0;
+        isGR_18052013 = true;
+
         ui->styleLabel->setText(s->get("name"));
 
         roundnum = s->get("rnum").toInt();
@@ -347,6 +352,38 @@ namespace Melampig
 
         ui->monitorButton->toggle();
         display->showDisplay();
+
+        if ( isGR_18052013 ) {
+            ui->plusRedPoint3->hide();
+            ui->redPoint3->hide();
+            ui->minusRedPoint3->hide();
+            ui->redThirdWin->hide();
+
+            ui->blueThirdWin->hide();
+            ui->plusBluePoint3->hide();
+            ui->bluePoint3->hide();
+            ui->minusBluePoint3->hide();
+
+            ui->roundThreeButton->hide();
+            ui->round3ovetime->hide();
+
+
+        } else {
+            ui->plusRedPoint3->show();
+            ui->redPoint3->show();
+            ui->minusRedPoint3->show();
+            ui->redThirdWin->show();
+
+            ui->blueThirdWin->show();
+            ui->plusBluePoint3->show();
+            ui->bluePoint3->show();
+            ui->minusBluePoint3->show();
+
+            ui->roundThreeButton->show();
+            ui->round3ovetime->show();
+        }
+
+        display->toggleGR18052013(isGR_18052013);
 
     }
 
@@ -829,8 +866,6 @@ namespace Melampig
 
         countdown->stop();
 
-        QString::number(currentRound());
-
         ui->minusRedBan->setEnabled(false);
         ui->plusRedBan->setEnabled(false);
 
@@ -1062,11 +1097,13 @@ namespace Melampig
 
         display->setRound(text);
 
-        ui->bluePoint->setText(QString("0"));
-        ui->redPoint->setText(QString("0"));
+        if ( !isGR_18052013 ) {
+            ui->bluePoint->setText(QString("0"));
+            ui->redPoint->setText(QString("0"));
 
-        display->setBluePoint(QString("0"));
-        display->setRedPoint(QString("0"));
+            display->setBluePoint(QString("0"));
+            display->setRedPoint(QString("0"));
+        }
     }
 
     void FightControl::openMonitor_clicked()

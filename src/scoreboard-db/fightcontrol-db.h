@@ -165,6 +165,8 @@ namespace Melampig
         bool overtimedirection,
               roundtimedirection,
               resttimedirection;
+
+        bool isGR_18052013;
     };
 
 }
