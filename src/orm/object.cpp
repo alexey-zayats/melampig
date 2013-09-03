@@ -85,9 +85,9 @@ namespace Melampig
 
 		Object::setObjectName("Melampig::Object");
 
-        viewItems.append( "id" );
-        viewItems.append( "name" );
-        viewItems.append( "created" );
+//        viewItems.append( "id" );
+//        viewItems.append( "name" );
+//        viewItems.append( "created" );
 	}
 
 	QStringList Object::nameSchema() const

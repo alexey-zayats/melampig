@@ -51,6 +51,8 @@ namespace Melampig
         void showDisplay() { stack->setCurrentIndex(1); }
         void showSplash() { stack->setCurrentIndex(0); }
 
+        void toggleGR18052013(bool);
+
         void changeSettings();
 
     protected slots:

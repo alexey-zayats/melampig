@@ -152,13 +152,27 @@ namespace Melampig
         displayUi->timerLabel->setFont(font9);
 
         int x = settings.value("image-size/pen", 24).toInt();
-        displayUi->redPen1->setMaximumSize(QSize(x,x));
-        displayUi->redPen2->setMaximumSize(QSize(x,x));
-        displayUi->redPen3->setMaximumSize(QSize(x,x));
 
-        displayUi->bluePen1->setMaximumSize(QSize(x,x));
-        displayUi->bluePen2->setMaximumSize(QSize(x,x));
-        displayUi->bluePen3->setMaximumSize(QSize(x,x));
+        // FIXME: possbile memory leak...
+        bluePenPic = new QPixmap(bluePenPic->scaledToWidth(x));
+        if ( displayUi->bluePen1->pixmap() != 0 ) displayUi->bluePen1->setPixmap(*bluePenPic);
+        if ( displayUi->bluePen2->pixmap() != 0 ) displayUi->bluePen2->setPixmap(*bluePenPic);
+        if ( displayUi->bluePen3->pixmap() != 0 ) displayUi->bluePen3->setPixmap(*bluePenPic);
+
+        redPenPic = new QPixmap(redPenPic->scaledToWidth(x));
+        if ( displayUi->redPen1->pixmap() != 0 ) displayUi->redPen1->setPixmap(*redPenPic);
+        if ( displayUi->redPen2->pixmap() != 0 ) displayUi->redPen2->setPixmap(*redPenPic);
+        if ( displayUi->redPen3->pixmap() != 0 ) displayUi->redPen3->setPixmap(*redPenPic);
+
+        blackPenPic = new QPixmap(blackPenPic->scaledToWidth(x));
+
+        displayUi->redPen1->setMinimumSize(QSize(x,x));
+        displayUi->redPen2->setMinimumSize(QSize(x,x));
+        displayUi->redPen3->setMinimumSize(QSize(x,x));
+
+        displayUi->bluePen1->setMinimumSize(QSize(x,x));
+        displayUi->bluePen2->setMinimumSize(QSize(x,x));
+        displayUi->bluePen3->setMinimumSize(QSize(x,x));
 
         redFlagWidget->setMaximumWidth(settings.value("flag/width", 200).toInt());
         redFlagWidget->setMaximumHeight(settings.value("flag/height", 100).toInt());
@@ -814,5 +828,37 @@ namespace Melampig
         splashUi->label->setPixmap(QPixmap( settings.value("splash", ":/logo-on-splash").toString() ));
 
         setFontsSize();
+    }
+
+    void FightDisplayFila::toggleGR18052013(bool off)
+    {
+        if ( off ) {
+            displayUi->redThirdLable1->hide();
+            displayUi->redThirdLable2->hide();
+            displayUi->redThirdLable3->hide();
+
+            displayUi->blueThirdLable3->hide();
+            displayUi->blueThirdLable2->hide();
+            displayUi->blueThirdLable1->hide();
+
+            displayUi->line_9->hide();
+            displayUi->line_14->hide();
+            displayUi->line_5->hide();
+            displayUi->line_11->hide();
+        } else {
+            displayUi->redThirdLable1->show();
+            displayUi->redThirdLable2->show();
+            displayUi->redThirdLable3->show();
+
+            displayUi->blueThirdLable3->show();
+            displayUi->blueThirdLable2->show();
+            displayUi->blueThirdLable1->show();
+
+            displayUi->line_9->show();
+            displayUi->line_14->show();
+
+            displayUi->line_5->show();
+            displayUi->line_11->show();
+        }
     }
 }

@@ -17,7 +17,7 @@
   InstallDirRegKey HKCU "Software\ScoreBoard-Lite" ""
 
   ;Request application privileges for Windows Vista
-  RequestExecutionLevel user
+  RequestExecutionLevel admin
 
 ;--------------------------------
 ;Interface Settings
