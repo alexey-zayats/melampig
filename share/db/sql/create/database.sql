@@ -1,0 +1,1 @@
+CREATE DATABASE melampig WITH OWNER melampig;
