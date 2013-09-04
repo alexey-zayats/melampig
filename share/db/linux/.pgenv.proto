@@ -1,0 +1,18 @@
+
+# PGVERSION=`pg_config --version | awk {'print $2'} | awk -F '.' {'print $1"."$2'}`
+
+PGBINDIR=`pg_config --bindir`
+SHAREDIR=`pg_config --sharedir`
+PSQL=$PGBINDIR/psql
+
+export PGPASSFILE=.pgpass
+
+export PGHOST=localhost
+export PGPORT=5432
+export PGUSER=melampig
+export PGDATABASE=melampig
+
+export USER=postgres
+export DB=template1
+
+export PSQLRC=.psqlrc

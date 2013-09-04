@@ -1,20 +1,10 @@
 #!/bin/bash
 
-# PGVERSION=`pg_config --version | awk {'print $2'} | awk -F '.' {'print $1"."$2'}`
-
-PGBINDIR=`pg_config --bindir`
-SHAREDIR=`pg_config --sharedir`
-
-export PGPASSFILE=pgpass
-export PGDATABASE=template1
-export PGPORT=5432
-export PGUSER=postgres
-export PGHOST=localhost
+.  .pgenv
 
 echo dropdb
-$PGBINDIR/dropdb -U $PGUSER melampig
+$PSQL -U $USER -d $DB -qf ../sql/drop/database.sql
 
 echo dropuser
-$PGBINDIR/dropuser -U $PGUSER melampig
-
+$PSQL -U $USER -d $DB -qf ../sql/drop/user.sql
 
