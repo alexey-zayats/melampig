@@ -353,19 +353,6 @@ namespace Melampig
     {
         QUrl baseUrl =  QUrl::fromLocalFile( QDir::cleanPath(QApplication::applicationDirPath() + "/../share"  ) + "/");
         webView->setHtml(html, baseUrl);
-
-#if 1
-       QString fpath = QString("%1/report.html").arg( QDir::tempPath() );
-
-       QFile file(fpath);
-       if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
-           return;
-
-       QTextStream out(&file);
-       out << html;
-
-       file.close();
-#endif
     }
 
     void ReportWidget::printPreview()
@@ -383,6 +370,9 @@ namespace Melampig
 
     void ReportWidget::printPdf()
     {
+
+        qDebug() << Q_FUNC_INFO;
+
         QSettings settings;
         settings.beginGroup("reports/settings");
 
@@ -404,13 +394,26 @@ namespace Melampig
     #endif
 
         bool ctafn = settings.value("comp_title_as_file_name", true).toBool();
-        QString fileName = ctafn ? QString("%1.pdf").arg(object->get("title")) : settings.value("save_filename", "report.pdf").toString();
+        QString fileName = ctafn ? QString("%1.pdf").arg(this->windowTitle()) : settings.value("save_filename", "report.pdf").toString();
         QString dirName = is_save ? settings.value("save_folder", QDir::tempPath()).toString() : QDir::tempPath();
 
-        QString reportPdf = QString("%1/%2").arg( dirName ).arg(fileName);
+        qDebug() << fileName;
+
+        fileName = fileName.replace( QRegExp("\\\\|\\/|:|\\*|\\?|\\\"|<|>"), QString("") );
+
+        qDebug() << fileName;
+
+        fileName = fileName.replace( QRegExp("\\s{2,}"), QString(" "));
+
+        qDebug() << fileName;
+
+        QString reportPdf = QString("%1/%2")
+                                    .arg( dirName )
+                                    .arg( fileName );
 
         settings.endGroup();
 
+        qDebug() << reportPdf;
 
         QPrinter p(QPrinter::HighResolution);
         p.setPageSize(QPrinter::A4);
@@ -424,8 +427,13 @@ namespace Melampig
             QStringList arguments;
             arguments << reportPdf;
 
-            QProcess *myProcess = new QProcess(this);
-            myProcess->start(openProgram, arguments);
+            QFileInfo finfo(openProgram);
+            if ( !finfo.exists() ) {
+                QMessageBox::warning(this, "Save to Pdf", "PDF viewer is not installed on this computer");
+            } else {
+                QProcess *myProcess = new QProcess(this);
+                myProcess->start(openProgram, arguments);
+            }
         }
     }
 

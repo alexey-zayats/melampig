@@ -149,10 +149,9 @@ void SettingsForm::play(const QString &fileName)
     if ( !QFile::exists(fileName) )
         return;
 
-    QString f(fileName);
-    f = f.replace(QString(' '), QString("\\ "));
+    Phonon::MediaSource mediaSource(fileName);
 
-    player->setCurrentSource(Phonon::MediaSource(f));
+    player->setCurrentSource(mediaSource);
     player->play();
 }
 
@@ -168,22 +167,22 @@ void SettingsForm::save()
     QSettings settings;
 
     if ( QFile::exists(endRound) )
-        settings.setValue("sound/001", endRound.replace(" ", "\\ "));
+        settings.setValue("sound/001", endRound);
     else
         settings.remove("sound/001");
 
     if ( QFile::exists(last30) )
-        settings.setValue("sound/002", last30.replace(" ", "\\ "));
+        settings.setValue("sound/002", last30);
     else
         settings.remove("sound/002");
 
     if ( QFile::exists(sound1) )
-        settings.setValue("sound/003", sound1.replace(" ", "\\ "));
+        settings.setValue("sound/003", sound1);
     else
         settings.remove("sound/003");
 
     if ( QFile::exists(sound2) )
-        settings.setValue("sound/004", sound2.replace(" ", "\\ "));
+        settings.setValue("sound/004", sound2);
     else
         settings.remove("sound/004");
 

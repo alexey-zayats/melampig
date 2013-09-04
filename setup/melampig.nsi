@@ -15,10 +15,7 @@
   
   ;Get installation folder from registry if available
   InstallDirRegKey HKCU "Software\Melampig" ""
-
-  ;Request application privileges for Windows Vista
-  RequestExecutionLevel admin
-
+  
 ;--------------------------------
 ;Interface Settings
 

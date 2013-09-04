@@ -5,6 +5,8 @@
 #include <QSettings>
 #include <QFileDialog>
 
+#include <QDebug>
+
 namespace Melampig
 {
 
@@ -43,6 +45,9 @@ SettingsForm::SettingsForm(Keeper *keeer, QWidget *parent) :
     ui->openLine->setText( settings.value("open_in").toString()  );
 #endif
 
+    QFileInfo aaa(QDir::tempPath());
+
+    qDebug() << QDir::tempPath() << " is writeable? " <<  aaa.isWritable();
     ui->folderLine->setText( settings.value("save_folder", QDir::tempPath()).toString() );
     ui->fileLine->setText( settings.value("save_filename", "report.pdf").toString() );
 

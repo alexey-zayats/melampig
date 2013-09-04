@@ -1,3 +1,6 @@
 !define QT "G:\Qt\4.7.3"
 !define PG "C:\Program Files (x86)\PostgreSQL\9.0"
 !define MELAMPIG "G:\Dev\melampig"
+
+;Request application privileges for Windows Vista
+RequestExecutionLevel admin

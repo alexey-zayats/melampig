@@ -16,9 +16,6 @@
   ;Get installation folder from registry if available
   InstallDirRegKey HKCU "Software\ScoreBoard" ""
 
-  ;Request application privileges for Windows Vista
-  RequestExecutionLevel admin
-
 ;--------------------------------
 ;Interface Settings
 
