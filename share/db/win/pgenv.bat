@@ -1,4 +1,6 @@
 
+chcp 1251
+
 set PGPASSFILE=pgpass
 
 set PGDIR="C:\Program Files (x86)\PostgreSQL\9.2"
@@ -8,3 +10,5 @@ set PGDATABASE=melampig
 
 set USER=postgres
 set DB=template1
+
+set PSQLRC=psqlrc.conf

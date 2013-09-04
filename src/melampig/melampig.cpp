@@ -23,8 +23,6 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
 
-    // HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AcroExch.Document\Shell\Open\Command
-
     app.setOrganizationName("Agitum");
     app.setOrganizationDomain("agitum.ru");
     app.setApplicationName("Melampig");

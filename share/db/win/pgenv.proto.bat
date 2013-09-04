@@ -8,3 +8,5 @@ set PGDATABASE=melampig
 
 set USER=postgres
 set DB=template1
+
+set PSQLRC=psqlrc.conf
