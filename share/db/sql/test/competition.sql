@@ -1,8 +1,5 @@
 -- test.generate_competition(in_title varchar, is_byteam boolean, team_num integer, wrestler_num integer, weight_num integer) 
 
-select test.generate_competition('3 команды', true, 3,  8, 7);
-
-/*
 -- personal
 -- 8
 select test.generate_competition('8 борцов', false, 5, 8, 5);
@@ -25,4 +22,3 @@ select test.generate_competition('8 команд',  true, 8,  8, 7);
 select test.generate_competition('9 команд',  true, 9,  8, 7);
 select test.generate_competition('10 команд', true, 10, 8, 7);
 
-*/
