@@ -18,5 +18,4 @@ linux-g++  {
 
 unix:QMAKE_RPATHDIR += $$PROJECT_PATH/lib
 
-RESOURCES = $$PROJECT_PATH/melampig.qrc
 

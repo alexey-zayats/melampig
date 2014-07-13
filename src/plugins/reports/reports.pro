@@ -1,7 +1,7 @@
 
 TEMPLATE = lib
 
-include ( $$PROJECT_PATH/src/shared.pri )
+include ( ../../shared.pri )
 
 TRANSLATIONS =  reports_ru.ts \
                 reports_en.ts
@@ -11,12 +11,12 @@ QT +=xml
 DEFINES += IMPORT_MELAMPIG_ORM
 DEFINES += IMPORT_MELAMPIG_UI
 
-INCLUDEPATH += $$PROJECT_PATH/src/melampig
-INCLUDEPATH += $$PROJECT_PATH/src/orm
-INCLUDEPATH += $$PROJECT_PATH/src/ui
+INCLUDEPATH += ../../melampig
+INCLUDEPATH += ../../orm
+INCLUDEPATH += ../../ui
 
-DESTDIR = $$PROJECT_PATH/lib
-LIBS +=  -L$$PROJECT_PATH/lib
+DESTDIR = ../../../lib
+LIBS +=  -L../../../lib
 
 LIBS += -lorm
 LIBS += -lui

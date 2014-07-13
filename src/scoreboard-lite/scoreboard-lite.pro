@@ -2,7 +2,7 @@ TEMPLATE = app
 
 QT       += core gui svg phonon
 
-DESTDIR = $$PROJECT_PATH/bin
+DESTDIR = ../../bin
 
 SOURCES += \
     scoreboard-lite.cpp\
@@ -24,8 +24,8 @@ FORMS    += \
     splash.ui \
     settingsform.ui
 
-LIBS +=  -L$$PROJECT_PATH/lib
+LIBS +=  -L../../lib
 
 TARGET = scoreboard-lite
 
-RESOURCES = $$PROJECT_PATH/melampig.qrc
+RESOURCES = ../../melampig.qrc

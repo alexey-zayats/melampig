@@ -1,19 +1,20 @@
 TEMPLATE = app
 
-include( $$PROJECT_PATH/src/shared.pri )
+include( ../shared.pri )
+RESOURCES = ../../melampig.qrc
 
 DEFINES += IMPORT_MELAMPIG_ORM
 DEFINES += IMPORT_MELAMPIG_UI
 
-DESTDIR = $$PROJECT_PATH/bin
-LIBS +=  -L$$PROJECT_PATH/lib
+DESTDIR = ../../bin
+LIBS +=  -L../../lib
 LIBS +=  -lorm
 LIBS +=  -lui
 
 TARGET =  melampig
 
-INCLUDEPATH += $$PROJECT_PATH/src/orm
-INCLUDEPATH += $$PROJECT_PATH/src/ui
+INCLUDEPATH += ../orm
+INCLUDEPATH += ../ui
 
 TRANSLATIONS =  melampig_ru.ts \
     melampig_en.ts

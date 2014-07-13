@@ -1,15 +1,16 @@
 
 TEMPLATE = lib
 
-include( $$PROJECT_PATH/src/shared.pri )
+include( ../shared.pri )
 
 TRANSLATIONS =  orm_ru.ts \
 		orm_en.ts 
 
-DESTDIR = $$PROJECT_PATH/lib
-DLLDESTDIR = $$PROJECT_PATH/bin
+DESTDIR = ../../lib
+DLLDESTDIR = ../../bin
 
-LIBS +=  -L$$PROJECT_PATH/lib
+RESOURCES = ../../melampig.qrc
+LIBS +=  -L../../lib
 
 TARGET = orm
 

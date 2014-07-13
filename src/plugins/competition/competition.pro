@@ -1,13 +1,13 @@
 TEMPLATE = lib
 
-include ( $$PROJECT_PATH/src/shared.pri )
+include ( ../../shared.pri )
 
 TRANSLATIONS =  competition_ru.ts \
 		competition_en.ts
 CONFIG += dll
 
-DESTDIR = $$PROJECT_PATH/lib
-LIBS +=  -L$$PROJECT_PATH/lib
+DESTDIR = ../../../lib
+LIBS +=  -L../../../lib
 
 LIBS += -lorm
 LIBS += -lui
@@ -17,9 +17,9 @@ TARGET = competition
 DEFINES += IMPORT_MELAMPIG_ORM
 DEFINES += IMPORT_MELAMPIG_UI
 
-INCLUDEPATH += $$PROJECT_PATH/src/melampig
-INCLUDEPATH += $$PROJECT_PATH/src/orm
-INCLUDEPATH += $$PROJECT_PATH/src/ui
+INCLUDEPATH += ../../melampig
+INCLUDEPATH += ../../orm
+INCLUDEPATH += ../../ui
 
 SOURCES += \
     competition.cpp \

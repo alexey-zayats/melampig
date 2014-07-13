@@ -1,22 +1,22 @@
 TEMPLATE = lib
 TARGET = ui
 
-include( $$PROJECT_PATH/src/shared.pri )
+include( ../shared.pri )
 
 TRANSLATIONS =  ui_ru.ts \
 		ui_en.ts
 
-DESTDIR = $$PROJECT_PATH/lib
-DLLDESTDIR = $$PROJECT_PATH/bin
-LIBS +=  -L$$PROJECT_PATH/lib
+DESTDIR = ../../lib
+DLLDESTDIR = ../../bin
+LIBS +=  -L../../lib
 LIBS += -lorm
 
 DEFINES += EXPORT_MELAMPIG_UI
 DEFINES += IMPORT_MELAMPIG_ORM
 
-INCLUDEPATH += $$PROJECT_PATH/src/orm
-INCLUDEPATH += $$PROJECT_PATH/src/ui
-INCLUDEPATH += $$PROJECT_PATH/src/melampig
+INCLUDEPATH += ../orm
+INCLUDEPATH += ../ui
+INCLUDEPATH += ../melampig
 
 HEADERS += \
     objectform.h \
@@ -91,7 +91,7 @@ SOURCES += \
     treemodelcompleter.cpp \
     referenceslector.cpp
 
-FORMS += $$PROJECT_PATH/src/melampig/mainwindow.ui \
+FORMS += ../melampig/mainwindow.ui \
     logondialog.ui \
     projectdialog.ui \
     startupdialog.ui

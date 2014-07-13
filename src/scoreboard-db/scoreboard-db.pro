@@ -1,7 +1,7 @@
 TEMPLATE = app
 QT       += core gui svg phonon sql
 
-DESTDIR = $$PROJECT_PATH/bin
+DESTDIR = ../../bin
 
 HEADERS += \
     fightcontrol-db.h \
@@ -43,7 +43,7 @@ linux-g++  {
     LIBS        += -L/usr/lib -lpq
 }
 
-LIBS +=  -L$$PROJECT_PATH/lib
+LIBS +=  -L../../lib
 LIBS +=  -lorm
 LIBS +=  -lui
 
@@ -52,9 +52,9 @@ TARGET = scoreboard-db
 DEFINES += IMPORT_MELAMPIG_ORM
 DEFINES += IMPORT_MELAMPIG_UI
 
-INCLUDEPATH += $$PROJECT_PATH/src/orm
-INCLUDEPATH += $$PROJECT_PATH/src/ui
+INCLUDEPATH += ../orm
+INCLUDEPATH += ../ui
 
-RESOURCES = $$PROJECT_PATH/melampig.qrc
+RESOURCES = ../../melampig.qrc
 
-unix:QMAKE_RPATHDIR += $$PROJECT_PATH/lib
+unix:QMAKE_RPATHDIR += ../../lib
