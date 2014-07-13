@@ -19,6 +19,6 @@ echo lastname
 echo fio
 %PGDIR%\bin\psql -qf ..\sql\test\fio.sql
 
-rem echo competition
-rem %PGDIR%\bin\psql -qf ..\sql\test\competition.sql
+echo competition
+%PGDIR%\bin\psql -qf ..\sql\test\competition.sql
 

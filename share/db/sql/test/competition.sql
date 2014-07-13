@@ -8,9 +8,9 @@ select test.generate_competition('16 борцов', false, 5, 16, 5);
 -- 32
 select test.generate_competition('32 борца', false, 5, 32, 5);
 -- 64
-select test.generate_competition('64 борца', false, 5, 32, 5);
+select test.generate_competition('64 борца', false, 5, 64, 5);
 -- 128
-select test.generate_competition('128 борцов', false, 5, 32, 5);
+select test.generate_competition('128 борцов', false, 5, 128, 5);
 
 -- by team
 select test.generate_competition('3 команды', true, 3,  8, 7);

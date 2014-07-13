@@ -32,7 +32,7 @@ SOURCES += \
     fightdisplayfila-db.cpp
 
 win32 {
-    PGDIR        = "C:\\Program Files (x86)\\PostgreSQL\\9.2"
+    PGDIR        = "C:\\Program Files (x86)\\PostgreSQL\\9.3"
     PATH        += "$$PGDIR\\bin"
     INCLUDEPATH += "$$PGDIR\\include"
     LIBS        += "-L$$PGDIR\\lib" -llibpq

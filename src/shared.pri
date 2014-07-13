@@ -5,11 +5,15 @@ DEPENDPATH  += .
 INCLUDEPATH += .
 
 win32 {
-    LIBS        += -llibpq
+    PGDIR        = "C:\\Program Files (x86)\\PostgreSQL\\9.3"
+    PATH        += "$$PGDIR\\bin"
+    INCLUDEPATH += "$$PGDIR\\include"
+    LIBS        += "-L$$PGDIR\\lib" -llibpq
 }
 
 linux-g++  {
-    LIBS        += -lpq
+    INCLUDEPATH += /usr/include/postgresql
+    LIBS        += -L/usr/lib -lpq
 }
 
 unix:QMAKE_RPATHDIR += $$PROJECT_PATH/lib
